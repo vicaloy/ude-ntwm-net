@@ -113,7 +113,7 @@ namespace Persistencia
                 integrante.Nombre = Convert.ToString(resultado["nombre"]);
                 integrante.Apellido = Convert.ToString(resultado["apellido"]);
                 integrante.FechaNacimiento = Convert.ToDateTime(resultado["nacimiento"]);
-                integrante.Foto = Byte.Parse(resultado["foto"]);
+                // integrante.Foto = Byte.Parse(resultado["foto"]);
 
                 integrantes.Add(integrante);
             }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oblig", "Oblig\Oblig.csproj", "{E5EB22B1-0904-4587-B79E-430BB0369E1D}"
 EndProject
@@ -19,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelos", "Modelos\Modelos.csproj", "{D011D3A6-EBD7-4020-862E-7A6A3E6E3415}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Persistencia\Persistencia.csproj", "{261DA79F-3FFA-468B-BA10-8DDFBD99BC90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{4547E524-CC7D-4871-A736-203C7E7FF21A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +56,10 @@ Global
 		{261DA79F-3FFA-468B-BA10-8DDFBD99BC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{261DA79F-3FFA-468B-BA10-8DDFBD99BC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{261DA79F-3FFA-468B-BA10-8DDFBD99BC90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4547E524-CC7D-4871-A736-203C7E7FF21A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4547E524-CC7D-4871-A736-203C7E7FF21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4547E524-CC7D-4871-A736-203C7E7FF21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4547E524-CC7D-4871-A736-203C7E7FF21A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
