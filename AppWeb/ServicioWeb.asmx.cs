@@ -37,5 +37,11 @@ namespace AppWeb
         {
             fachada.EliminarIntegrante(integranteVO);
         }
+
+        [WebMethod]
+        public IntegranteVO ObtenerIntegranteWS(int id)
+        {
+            return fachada.ObtenerIntegrante(id);
+        }
     }
 }

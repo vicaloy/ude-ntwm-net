@@ -52,5 +52,9 @@ namespace Logica
             daoIntegrante.EliminarIntegrante(integrante);
 
         }
+
+        public IntegranteVO ObtenerIntegrante(int id) {
+            return new IntegranteVO(1, "Nombre", "Apellido", DateTime.Now, null);
+        }
     }
 }

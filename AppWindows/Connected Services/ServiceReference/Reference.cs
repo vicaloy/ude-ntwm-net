@@ -144,6 +144,13 @@ namespace AppWindows.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarIntegranteWS", ReplyAction="*")]
         System.Threading.Tasks.Task<AppWindows.ServiceReference.EliminarIntegranteWSResponse> EliminarIntegranteWSAsync(AppWindows.ServiceReference.EliminarIntegranteWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ObtenerIntegranteWSResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerIntegranteWS", ReplyAction="*")]
+        AppWindows.ServiceReference.ObtenerIntegranteWSResponse ObtenerIntegranteWS(AppWindows.ServiceReference.ObtenerIntegranteWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerIntegranteWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerIntegranteWSResponse> ObtenerIntegranteWSAsync(AppWindows.ServiceReference.ObtenerIntegranteWSRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -329,6 +336,74 @@ namespace AppWindows.ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerIntegranteWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerIntegranteWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ObtenerIntegranteWSRequestBody Body;
+        
+        public ObtenerIntegranteWSRequest() {
+        }
+        
+        public ObtenerIntegranteWSRequest(AppWindows.ServiceReference.ObtenerIntegranteWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerIntegranteWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        public ObtenerIntegranteWSRequestBody() {
+        }
+        
+        public ObtenerIntegranteWSRequestBody(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerIntegranteWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerIntegranteWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ObtenerIntegranteWSResponseBody Body;
+        
+        public ObtenerIntegranteWSResponse() {
+        }
+        
+        public ObtenerIntegranteWSResponse(AppWindows.ServiceReference.ObtenerIntegranteWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerIntegranteWSResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.IntegranteVO ObtenerIntegranteWSResult;
+        
+        public ObtenerIntegranteWSResponseBody() {
+        }
+        
+        public ObtenerIntegranteWSResponseBody(AppWindows.ServiceReference.IntegranteVO ObtenerIntegranteWSResult) {
+            this.ObtenerIntegranteWSResult = ObtenerIntegranteWSResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ServicioWebSoapChannel : AppWindows.ServiceReference.ServicioWebSoap, System.ServiceModel.IClientChannel {
     }
@@ -426,6 +501,31 @@ namespace AppWindows.ServiceReference {
             inValue.Body = new AppWindows.ServiceReference.EliminarIntegranteWSRequestBody();
             inValue.Body.integranteVO = integranteVO;
             return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).EliminarIntegranteWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.ObtenerIntegranteWSResponse AppWindows.ServiceReference.ServicioWebSoap.ObtenerIntegranteWS(AppWindows.ServiceReference.ObtenerIntegranteWSRequest request) {
+            return base.Channel.ObtenerIntegranteWS(request);
+        }
+        
+        public AppWindows.ServiceReference.IntegranteVO ObtenerIntegranteWS(int id) {
+            AppWindows.ServiceReference.ObtenerIntegranteWSRequest inValue = new AppWindows.ServiceReference.ObtenerIntegranteWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ObtenerIntegranteWSRequestBody();
+            inValue.Body.id = id;
+            AppWindows.ServiceReference.ObtenerIntegranteWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ObtenerIntegranteWS(inValue);
+            return retVal.Body.ObtenerIntegranteWSResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerIntegranteWSResponse> AppWindows.ServiceReference.ServicioWebSoap.ObtenerIntegranteWSAsync(AppWindows.ServiceReference.ObtenerIntegranteWSRequest request) {
+            return base.Channel.ObtenerIntegranteWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerIntegranteWSResponse> ObtenerIntegranteWSAsync(int id) {
+            AppWindows.ServiceReference.ObtenerIntegranteWSRequest inValue = new AppWindows.ServiceReference.ObtenerIntegranteWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ObtenerIntegranteWSRequestBody();
+            inValue.Body.id = id;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ObtenerIntegranteWSAsync(inValue);
         }
     }
 }

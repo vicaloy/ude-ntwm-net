@@ -13,6 +13,7 @@ namespace AppWindows.FormularioIntegrante
 {
     public partial class FormIntegrante : Form
     {
+        IntegranteControlador controlador = new IntegranteControlador();
         byte[] buffer = null;
         public FormIntegrante()
         {
@@ -21,7 +22,6 @@ namespace AppWindows.FormularioIntegrante
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            IntegranteControlador controlador = new IntegranteControlador();
             lblError.Text=controlador.InsertarIntegranteForm(txtId.Text, txtNombre.Text, txtApellido.Text, pickerFecha.Value.Date, buffer);
         }
 
@@ -32,6 +32,27 @@ namespace AppWindows.FormularioIntegrante
             if (dialogo.ShowDialog() == DialogResult.OK) {
                 buffer = File.ReadAllBytes(dialogo.FileName);
             }
+        }
+
+        private void btnModifcar_Click(object sender, EventArgs e)
+        {
+            lblError.Text = controlador.ModificarIntegranteForm(txtId.Text, txtNombre.Text, txtApellido.Text, pickerFecha.Value.Date, buffer);
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ServiceReference.IntegranteVO integranteVO = controlador.ObtenerIntegranteForm(txtId.Text);
+            txtNombre.Text = integranteVO.Nombre;
+            txtApellido.Text = integranteVO.Apellido;
+            pickerFecha.Value = integranteVO.FechaNacimiento;
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            lblError.Text = controlador.EliminarIntegranteForm(txtId.Text, txtNombre.Text, txtApellido.Text, pickerFecha.Value.Date, buffer);
+
         }
     }
 }

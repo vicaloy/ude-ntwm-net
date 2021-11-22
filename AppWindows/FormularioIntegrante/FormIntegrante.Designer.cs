@@ -73,6 +73,7 @@ namespace AppWindows.FormularioIntegrante
             this.btnModifcar.TabIndex = 2;
             this.btnModifcar.Text = "MODIFICAR";
             this.btnModifcar.UseVisualStyleBackColor = true;
+            this.btnModifcar.Click += new System.EventHandler(this.btnModifcar_Click);
             // 
             // txtNombre
             // 
@@ -156,6 +157,7 @@ namespace AppWindows.FormularioIntegrante
             this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblError
             // 
@@ -173,6 +175,7 @@ namespace AppWindows.FormularioIntegrante
             this.btnBuscar.TabIndex = 19;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FormIntegrante
             // 

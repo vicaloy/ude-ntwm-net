@@ -12,5 +12,6 @@ namespace Logica
         void InsertarIntegrante(IntegranteVO integranteVO);
         void ModificarIntegrante(IntegranteVO integranteVO);
         void EliminarIntegrante(IntegranteVO integranteVO);
+        IntegranteVO ObtenerIntegrante(int id);
     }
 }

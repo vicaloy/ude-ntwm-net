@@ -90,7 +90,13 @@
     <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.InsertarIntegranteWSResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.IntegranteVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.ModificarIntegranteWSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.ObtenerIntegranteWSResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReference\ServicioWeb.wsdl" />

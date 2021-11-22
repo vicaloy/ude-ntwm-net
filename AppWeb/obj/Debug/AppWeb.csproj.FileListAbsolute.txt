@@ -64,3 +64,4 @@ C:\Users\victo\source\repos\Oblig\AppWeb\obj\Debug\AppWeb.csproj.AssemblyReferen
 C:\Users\victo\source\repos\Oblig\AppWeb\obj\Debug\AppWeb.csproj.CoreCompileInputs.cache
 C:\Users\victo\source\repos\Oblig\AppWeb\obj\Debug\AppWeb.dll
 C:\Users\victo\source\repos\Oblig\AppWeb\obj\Debug\AppWeb.pdb
+C:\Users\victo\source\repos\Oblig\AppWeb\obj\Debug\AppWeb.csproj.CopyComplete

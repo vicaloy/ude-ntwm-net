@@ -8,6 +8,5 @@ C:\Users\victo\source\repos\Oblig\Logica\bin\Debug\Persistencia.pdb
 C:\Users\victo\source\repos\Oblig\Logica\bin\Debug\ValueObject.pdb
 C:\Users\victo\source\repos\Oblig\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
 C:\Users\victo\source\repos\Oblig\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
-C:\Users\victo\source\repos\Oblig\Logica\obj\Debug\Logica.csproj.CopyComplete
 C:\Users\victo\source\repos\Oblig\Logica\obj\Debug\Logica.dll
 C:\Users\victo\source\repos\Oblig\Logica\obj\Debug\Logica.pdb
