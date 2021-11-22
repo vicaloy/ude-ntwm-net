@@ -60,6 +60,7 @@
     <Compile Include="FormularioBanda\FormBanda.Designer.cs">
       <DependentUpon>FormBanda.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioCancion\CancionControlador.cs" />
     <Compile Include="FormularioCancion\FormCancion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +78,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormularioBanda\FormBanda.resx">
       <DependentUpon>FormBanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioCancion\FormCancion.resx">
+      <DependentUpon>FormCancion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioIntegrante\FormIntegrante.resx">
       <DependentUpon>FormIntegrante.cs</DependentUpon>
