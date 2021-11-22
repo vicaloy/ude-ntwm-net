@@ -10,22 +10,14 @@ using System.Threading.Tasks;
 
 namespace Persistencia
 {
-public class DAOIntegrante
-{
+    public class DAOIntegrante
+    {
 
         public Query query = new Query();
 
-        static DAOIntegrante instance;
-
-        public DAOIntegrante() { }
-
-        public static DAOIntegrante Instance()
+        public DAOIntegrante()
         {
-            if (instance == null)
-            {
-                instance = new DAOIntegrante();
-            }
-            return instance;
+
         }
 
         public void InsertarIntegrante(Integrante integrante)
@@ -93,6 +85,72 @@ public class DAOIntegrante
 
             connection.Close();
 
+        }
+
+        public List<Integrante> ListarIntegrantes()
+        {
+
+            List<Integrante> integrantes = new List<Integrante>();
+
+            Integrante integrante = new Integrante();
+
+            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            SqlConnection connection = new SqlConnection(con);
+
+            connection.Open();
+
+            string cmd = query.ListarIntegrantes();
+
+            SqlCommand comando = new SqlCommand(cmd, connection);
+
+            SqlDataReader resultado = comando.ExecuteReader();
+
+            connection.Close();
+
+            while (resultado.Read())
+            {
+                integrante.Id = Convert.ToInt32(resultado["id"]);
+                integrante.Nombre = Convert.ToString(resultado["nombre"]);
+                integrante.Apellido = Convert.ToString(resultado["apellido"]);
+                integrante.FechaNacimiento = Convert.ToDateTime(resultado["nacimiento"]);
+                //integrante.Foto = Byte.Parse(resultado["foto"]);
+
+                integrantes.Add(integrante);
+            }
+
+            return integrantes;
+        }
+
+        public Integrante BuscarIntegrante(Integrante integrante)
+        {
+
+            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            SqlConnection connection = new SqlConnection(con);
+
+            connection.Open();
+
+            string cmd = query.BuscarIntegrante();
+
+            SqlCommand comando = new SqlCommand(cmd, connection);
+
+            comando.Parameters.AddWithValue("@id", integrante.Id);
+
+            SqlDataReader resultado = comando.ExecuteReader();
+
+            connection.Close();
+
+            while (resultado.Read())
+            {
+
+                integrante.Id = Convert.ToInt32(resultado["id"]);
+                integrante.Nombre = Convert.ToString(resultado["nombre"]);
+                integrante.Apellido = Convert.ToString(resultado["apellido"]);
+                integrante.FechaNacimiento = Convert.ToDateTime(resultado["nacimiento"]);
+                //integrante.Foto = Byte.Parse(resultado["foto"]);
+
+            }
+
+            return integrante;
         }
 
     }
