@@ -120,6 +120,128 @@ namespace AppWindows.ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BandaVO", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class BandaVO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GeneroMusicalField;
+        
+        private int AnioCreacionField;
+        
+        private int AnioSeparacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AppWindows.ServiceReference.IntegranteVO[] IntegrantesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string GeneroMusical {
+            get {
+                return this.GeneroMusicalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GeneroMusicalField, value) != true)) {
+                    this.GeneroMusicalField = value;
+                    this.RaisePropertyChanged("GeneroMusical");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public int AnioCreacion {
+            get {
+                return this.AnioCreacionField;
+            }
+            set {
+                if ((this.AnioCreacionField.Equals(value) != true)) {
+                    this.AnioCreacionField = value;
+                    this.RaisePropertyChanged("AnioCreacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public int AnioSeparacion {
+            get {
+                return this.AnioSeparacionField;
+            }
+            set {
+                if ((this.AnioSeparacionField.Equals(value) != true)) {
+                    this.AnioSeparacionField = value;
+                    this.RaisePropertyChanged("AnioSeparacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public AppWindows.ServiceReference.IntegranteVO[] Integrantes {
+            get {
+                return this.IntegrantesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IntegrantesField, value) != true)) {
+                    this.IntegrantesField = value;
+                    this.RaisePropertyChanged("Integrantes");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.ServicioWebSoap")]
     public interface ServicioWebSoap {
@@ -151,6 +273,34 @@ namespace AppWindows.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerIntegranteWS", ReplyAction="*")]
         System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerIntegranteWSResponse> ObtenerIntegranteWSAsync(AppWindows.ServiceReference.ObtenerIntegranteWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento bandaVO del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertarBandaWS", ReplyAction="*")]
+        AppWindows.ServiceReference.InsertarBandaWSResponse InsertarBandaWS(AppWindows.ServiceReference.InsertarBandaWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertarBandaWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.InsertarBandaWSResponse> InsertarBandaWSAsync(AppWindows.ServiceReference.InsertarBandaWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento bandaVO del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarBandaWS", ReplyAction="*")]
+        AppWindows.ServiceReference.ModificarBandaWSResponse ModificarBandaWS(AppWindows.ServiceReference.ModificarBandaWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarBandaWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ModificarBandaWSResponse> ModificarBandaWSAsync(AppWindows.ServiceReference.ModificarBandaWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento bandaVO del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarBandaWS", ReplyAction="*")]
+        AppWindows.ServiceReference.EliminarBandaWSResponse EliminarBandaWS(AppWindows.ServiceReference.EliminarBandaWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarBandaWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.EliminarBandaWSResponse> EliminarBandaWSAsync(AppWindows.ServiceReference.EliminarBandaWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ObtenerBandaWSResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerBandaWS", ReplyAction="*")]
+        AppWindows.ServiceReference.ObtenerBandaWSResponse ObtenerBandaWS(AppWindows.ServiceReference.ObtenerBandaWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerBandaWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerBandaWSResponse> ObtenerBandaWSAsync(AppWindows.ServiceReference.ObtenerBandaWSRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -404,6 +554,257 @@ namespace AppWindows.ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class InsertarBandaWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarBandaWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.InsertarBandaWSRequestBody Body;
+        
+        public InsertarBandaWSRequest() {
+        }
+        
+        public InsertarBandaWSRequest(AppWindows.ServiceReference.InsertarBandaWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class InsertarBandaWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.BandaVO bandaVO;
+        
+        public InsertarBandaWSRequestBody() {
+        }
+        
+        public InsertarBandaWSRequestBody(AppWindows.ServiceReference.BandaVO bandaVO) {
+            this.bandaVO = bandaVO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class InsertarBandaWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarBandaWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.InsertarBandaWSResponseBody Body;
+        
+        public InsertarBandaWSResponse() {
+        }
+        
+        public InsertarBandaWSResponse(AppWindows.ServiceReference.InsertarBandaWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class InsertarBandaWSResponseBody {
+        
+        public InsertarBandaWSResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ModificarBandaWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarBandaWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ModificarBandaWSRequestBody Body;
+        
+        public ModificarBandaWSRequest() {
+        }
+        
+        public ModificarBandaWSRequest(AppWindows.ServiceReference.ModificarBandaWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ModificarBandaWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.BandaVO bandaVO;
+        
+        public ModificarBandaWSRequestBody() {
+        }
+        
+        public ModificarBandaWSRequestBody(AppWindows.ServiceReference.BandaVO bandaVO) {
+            this.bandaVO = bandaVO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ModificarBandaWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarBandaWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ModificarBandaWSResponseBody Body;
+        
+        public ModificarBandaWSResponse() {
+        }
+        
+        public ModificarBandaWSResponse(AppWindows.ServiceReference.ModificarBandaWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class ModificarBandaWSResponseBody {
+        
+        public ModificarBandaWSResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EliminarBandaWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EliminarBandaWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.EliminarBandaWSRequestBody Body;
+        
+        public EliminarBandaWSRequest() {
+        }
+        
+        public EliminarBandaWSRequest(AppWindows.ServiceReference.EliminarBandaWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class EliminarBandaWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.BandaVO bandaVO;
+        
+        public EliminarBandaWSRequestBody() {
+        }
+        
+        public EliminarBandaWSRequestBody(AppWindows.ServiceReference.BandaVO bandaVO) {
+            this.bandaVO = bandaVO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EliminarBandaWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EliminarBandaWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.EliminarBandaWSResponseBody Body;
+        
+        public EliminarBandaWSResponse() {
+        }
+        
+        public EliminarBandaWSResponse(AppWindows.ServiceReference.EliminarBandaWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class EliminarBandaWSResponseBody {
+        
+        public EliminarBandaWSResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerBandaWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerBandaWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ObtenerBandaWSRequestBody Body;
+        
+        public ObtenerBandaWSRequest() {
+        }
+        
+        public ObtenerBandaWSRequest(AppWindows.ServiceReference.ObtenerBandaWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerBandaWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        public ObtenerBandaWSRequestBody() {
+        }
+        
+        public ObtenerBandaWSRequestBody(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerBandaWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerBandaWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ObtenerBandaWSResponseBody Body;
+        
+        public ObtenerBandaWSResponse() {
+        }
+        
+        public ObtenerBandaWSResponse(AppWindows.ServiceReference.ObtenerBandaWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerBandaWSResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.BandaVO ObtenerBandaWSResult;
+        
+        public ObtenerBandaWSResponseBody() {
+        }
+        
+        public ObtenerBandaWSResponseBody(AppWindows.ServiceReference.BandaVO ObtenerBandaWSResult) {
+            this.ObtenerBandaWSResult = ObtenerBandaWSResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ServicioWebSoapChannel : AppWindows.ServiceReference.ServicioWebSoap, System.ServiceModel.IClientChannel {
     }
@@ -526,6 +927,103 @@ namespace AppWindows.ServiceReference {
             inValue.Body = new AppWindows.ServiceReference.ObtenerIntegranteWSRequestBody();
             inValue.Body.id = id;
             return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ObtenerIntegranteWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.InsertarBandaWSResponse AppWindows.ServiceReference.ServicioWebSoap.InsertarBandaWS(AppWindows.ServiceReference.InsertarBandaWSRequest request) {
+            return base.Channel.InsertarBandaWS(request);
+        }
+        
+        public void InsertarBandaWS(AppWindows.ServiceReference.BandaVO bandaVO) {
+            AppWindows.ServiceReference.InsertarBandaWSRequest inValue = new AppWindows.ServiceReference.InsertarBandaWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.InsertarBandaWSRequestBody();
+            inValue.Body.bandaVO = bandaVO;
+            AppWindows.ServiceReference.InsertarBandaWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).InsertarBandaWS(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.InsertarBandaWSResponse> AppWindows.ServiceReference.ServicioWebSoap.InsertarBandaWSAsync(AppWindows.ServiceReference.InsertarBandaWSRequest request) {
+            return base.Channel.InsertarBandaWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.InsertarBandaWSResponse> InsertarBandaWSAsync(AppWindows.ServiceReference.BandaVO bandaVO) {
+            AppWindows.ServiceReference.InsertarBandaWSRequest inValue = new AppWindows.ServiceReference.InsertarBandaWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.InsertarBandaWSRequestBody();
+            inValue.Body.bandaVO = bandaVO;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).InsertarBandaWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.ModificarBandaWSResponse AppWindows.ServiceReference.ServicioWebSoap.ModificarBandaWS(AppWindows.ServiceReference.ModificarBandaWSRequest request) {
+            return base.Channel.ModificarBandaWS(request);
+        }
+        
+        public void ModificarBandaWS(AppWindows.ServiceReference.BandaVO bandaVO) {
+            AppWindows.ServiceReference.ModificarBandaWSRequest inValue = new AppWindows.ServiceReference.ModificarBandaWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ModificarBandaWSRequestBody();
+            inValue.Body.bandaVO = bandaVO;
+            AppWindows.ServiceReference.ModificarBandaWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ModificarBandaWS(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ModificarBandaWSResponse> AppWindows.ServiceReference.ServicioWebSoap.ModificarBandaWSAsync(AppWindows.ServiceReference.ModificarBandaWSRequest request) {
+            return base.Channel.ModificarBandaWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.ModificarBandaWSResponse> ModificarBandaWSAsync(AppWindows.ServiceReference.BandaVO bandaVO) {
+            AppWindows.ServiceReference.ModificarBandaWSRequest inValue = new AppWindows.ServiceReference.ModificarBandaWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ModificarBandaWSRequestBody();
+            inValue.Body.bandaVO = bandaVO;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ModificarBandaWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.EliminarBandaWSResponse AppWindows.ServiceReference.ServicioWebSoap.EliminarBandaWS(AppWindows.ServiceReference.EliminarBandaWSRequest request) {
+            return base.Channel.EliminarBandaWS(request);
+        }
+        
+        public void EliminarBandaWS(AppWindows.ServiceReference.BandaVO bandaVO) {
+            AppWindows.ServiceReference.EliminarBandaWSRequest inValue = new AppWindows.ServiceReference.EliminarBandaWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.EliminarBandaWSRequestBody();
+            inValue.Body.bandaVO = bandaVO;
+            AppWindows.ServiceReference.EliminarBandaWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).EliminarBandaWS(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.EliminarBandaWSResponse> AppWindows.ServiceReference.ServicioWebSoap.EliminarBandaWSAsync(AppWindows.ServiceReference.EliminarBandaWSRequest request) {
+            return base.Channel.EliminarBandaWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.EliminarBandaWSResponse> EliminarBandaWSAsync(AppWindows.ServiceReference.BandaVO bandaVO) {
+            AppWindows.ServiceReference.EliminarBandaWSRequest inValue = new AppWindows.ServiceReference.EliminarBandaWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.EliminarBandaWSRequestBody();
+            inValue.Body.bandaVO = bandaVO;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).EliminarBandaWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.ObtenerBandaWSResponse AppWindows.ServiceReference.ServicioWebSoap.ObtenerBandaWS(AppWindows.ServiceReference.ObtenerBandaWSRequest request) {
+            return base.Channel.ObtenerBandaWS(request);
+        }
+        
+        public AppWindows.ServiceReference.BandaVO ObtenerBandaWS(int id) {
+            AppWindows.ServiceReference.ObtenerBandaWSRequest inValue = new AppWindows.ServiceReference.ObtenerBandaWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ObtenerBandaWSRequestBody();
+            inValue.Body.id = id;
+            AppWindows.ServiceReference.ObtenerBandaWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ObtenerBandaWS(inValue);
+            return retVal.Body.ObtenerBandaWSResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerBandaWSResponse> AppWindows.ServiceReference.ServicioWebSoap.ObtenerBandaWSAsync(AppWindows.ServiceReference.ObtenerBandaWSRequest request) {
+            return base.Channel.ObtenerBandaWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerBandaWSResponse> ObtenerBandaWSAsync(int id) {
+            AppWindows.ServiceReference.ObtenerBandaWSRequest inValue = new AppWindows.ServiceReference.ObtenerBandaWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ObtenerBandaWSRequestBody();
+            inValue.Body.id = id;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ObtenerBandaWSAsync(inValue);
         }
     }
 }

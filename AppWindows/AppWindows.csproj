@@ -53,6 +53,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="FormularioBanda\BandaControlador.cs" />
+    <Compile Include="FormularioBanda\FormBanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioBanda\FormBanda.Designer.cs">
+      <DependentUpon>FormBanda.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioForm1\Class1.cs" />
     <Compile Include="FormularioForm1\Form1.cs">
       <SubType>Form</SubType>
@@ -69,6 +76,9 @@
     <Compile Include="FormularioIntegrante\IntegranteControlador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormularioBanda\FormBanda.resx">
+      <DependentUpon>FormBanda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioForm1\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,7 +94,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.BandaVO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.EliminarBandaWSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.EliminarIntegranteWSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.InsertarBandaWSResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.InsertarIntegranteWSResponse.datasource">
@@ -93,7 +112,13 @@
     <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.IntegranteVO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.ModificarBandaWSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.ModificarIntegranteWSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.ObtenerBandaWSResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReference\AppWindows.ServiceReference.ObtenerIntegranteWSResponse.datasource">

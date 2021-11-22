@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BandaVO.cs" />
     <Compile Include="IntegranteVO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

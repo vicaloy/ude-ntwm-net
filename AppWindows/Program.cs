@@ -16,7 +16,7 @@ namespace AppWindows
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormularioIntegrante.FormIntegrante());
+            Application.Run(new FormularioBanda.FormBanda());
         }
     }
 }

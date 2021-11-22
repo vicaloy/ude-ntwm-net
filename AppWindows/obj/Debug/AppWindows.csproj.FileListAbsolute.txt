@@ -9,3 +9,4 @@ C:\Users\victo\source\repos\Oblig\AppWindows\bin\Debug\AppWindows.exe
 C:\Users\victo\source\repos\Oblig\AppWindows\bin\Debug\AppWindows.pdb
 C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.exe
 C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.pdb
+C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.FormularioBanda.FormBanda.resources

@@ -43,5 +43,28 @@ namespace AppWeb
         {
             return fachada.ObtenerIntegrante(id);
         }
+        [WebMethod]
+        public void InsertarBandaWS(BandaVO bandaVO)
+        {
+            fachada.InsertarBanda(bandaVO);
+
+        }
+        [WebMethod]
+        public void ModificarBandaWS(BandaVO bandaVO)
+        {
+            fachada.ModificarBanda(bandaVO);
+
+        }
+        [WebMethod]
+        public void EliminarBandaWS(BandaVO bandaVO)
+        {
+            fachada.EliminarBanda(bandaVO);
+
+        }
+        [WebMethod]
+        public BandaVO ObtenerBandaWS(int id)
+        {
+            return fachada.ObtenerBanda(id);
+        }
     }
 }

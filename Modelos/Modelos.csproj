@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banda.cs" />
     <Compile Include="Integrante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

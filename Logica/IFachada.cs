@@ -13,5 +13,10 @@ namespace Logica
         void ModificarIntegrante(IntegranteVO integranteVO);
         void EliminarIntegrante(IntegranteVO integranteVO);
         IntegranteVO ObtenerIntegrante(int id);
+
+        void InsertarBanda(BandaVO bandaVO);
+        void ModificarBanda(BandaVO bandaVO);
+        void EliminarBanda(BandaVO bandaVO);
+        BandaVO ObtenerBanda(int id);
     }
 }
