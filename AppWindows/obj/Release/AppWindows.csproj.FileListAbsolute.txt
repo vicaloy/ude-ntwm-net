@@ -1,0 +1,10 @@
+C:\Users\victo\source\repos\Oblig\AppWindows\obj\Release\AppWindows.csproj.AssemblyReference.cache
+C:\Users\victo\source\repos\Oblig\AppWindows\obj\Release\AppWindows.FormularioForm1.Form1.resources
+C:\Users\victo\source\repos\Oblig\AppWindows\obj\Release\AppWindows.Properties.Resources.resources
+C:\Users\victo\source\repos\Oblig\AppWindows\obj\Release\AppWindows.csproj.GenerateResource.cache
+C:\Users\victo\source\repos\Oblig\AppWindows\obj\Release\AppWindows.csproj.CoreCompileInputs.cache
+C:\Users\victo\source\repos\Oblig\AppWindows\bin\Release\AppWindows.exe.config
+C:\Users\victo\source\repos\Oblig\AppWindows\bin\Release\AppWindows.exe
+C:\Users\victo\source\repos\Oblig\AppWindows\bin\Release\AppWindows.pdb
+C:\Users\victo\source\repos\Oblig\AppWindows\obj\Release\AppWindows.exe
+C:\Users\victo\source\repos\Oblig\AppWindows\obj\Release\AppWindows.pdb

@@ -1,0 +1,9 @@
+C:\Users\victo\source\repos\Oblig\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\victo\source\repos\Oblig\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\victo\source\repos\Oblig\Persistencia\bin\Debug\Modelos.dll
+C:\Users\victo\source\repos\Oblig\Persistencia\bin\Debug\Modelos.pdb
+C:\Users\victo\source\repos\Oblig\Persistencia\obj\Debug\Persistencia.csproj.AssemblyReference.cache
+C:\Users\victo\source\repos\Oblig\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\victo\source\repos\Oblig\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\Users\victo\source\repos\Oblig\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\victo\source\repos\Oblig\Persistencia\obj\Debug\Persistencia.pdb

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="InsertarIntegranteWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="integranteVO" type="tns:IntegranteVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IntegranteVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Apellido" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaNacimiento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Foto" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertarIntegranteWSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModificarIntegranteWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="integranteVO" type="tns:IntegranteVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarIntegranteWSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EliminarIntegranteWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="integranteVO" type="tns:IntegranteVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarIntegranteWSResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertarIntegranteWSSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarIntegranteWS" />
+  </wsdl:message>
+  <wsdl:message name="InsertarIntegranteWSSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarIntegranteWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarIntegranteWSSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarIntegranteWS" />
+  </wsdl:message>
+  <wsdl:message name="ModificarIntegranteWSSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarIntegranteWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarIntegranteWSSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarIntegranteWS" />
+  </wsdl:message>
+  <wsdl:message name="EliminarIntegranteWSSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarIntegranteWSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioWebSoap">
+    <wsdl:operation name="InsertarIntegranteWS">
+      <wsdl:input message="tns:InsertarIntegranteWSSoapIn" />
+      <wsdl:output message="tns:InsertarIntegranteWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarIntegranteWS">
+      <wsdl:input message="tns:ModificarIntegranteWSSoapIn" />
+      <wsdl:output message="tns:ModificarIntegranteWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarIntegranteWS">
+      <wsdl:input message="tns:EliminarIntegranteWSSoapIn" />
+      <wsdl:output message="tns:EliminarIntegranteWSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioWebSoap" type="tns:ServicioWebSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarIntegranteWS">
+      <soap:operation soapAction="http://tempuri.org/InsertarIntegranteWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarIntegranteWS">
+      <soap:operation soapAction="http://tempuri.org/ModificarIntegranteWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarIntegranteWS">
+      <soap:operation soapAction="http://tempuri.org/EliminarIntegranteWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioWebSoap12" type="tns:ServicioWebSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarIntegranteWS">
+      <soap12:operation soapAction="http://tempuri.org/InsertarIntegranteWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarIntegranteWS">
+      <soap12:operation soapAction="http://tempuri.org/ModificarIntegranteWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarIntegranteWS">
+      <soap12:operation soapAction="http://tempuri.org/EliminarIntegranteWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioWeb">
+    <wsdl:port name="ServicioWebSoap" binding="tns:ServicioWebSoap">
+      <soap:address location="https://localhost:44379/ServicioWeb.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioWebSoap12" binding="tns:ServicioWebSoap12">
+      <soap12:address location="https://localhost:44379/ServicioWeb.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
