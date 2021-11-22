@@ -18,5 +18,12 @@ namespace Logica
         void ModificarBanda(BandaVO bandaVO);
         void EliminarBanda(BandaVO bandaVO);
         BandaVO ObtenerBanda(int id);
+
+        void InsertarAlbum(AlbumVO albumVO);
+        void ModificarAlbum(AlbumVO albumVO);
+        void EliminarAlbum(AlbumVO albumVO);
+        void InsertarCancion(CancionVO cancionVO);
+        void ModificarCancion(CancionVO cancionVO);
+        void EliminarCancion(CancionVO cancionVO);
     }
 }

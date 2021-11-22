@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Album.cs" />
     <Compile Include="Banda.cs" />
+    <Compile Include="Cancion.cs" />
     <Compile Include="Integrante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

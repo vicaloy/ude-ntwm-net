@@ -66,5 +66,41 @@ namespace AppWeb
         {
             return fachada.ObtenerBanda(id);
         }
+
+        [WebMethod]
+        public void EliminarCancionWS(CancionVO cancionVO)
+        {
+            fachada.EliminarCancion(cancionVO);
+        }
+
+        [WebMethod]
+        public void ModificarCancionWS(CancionVO cancionVO)
+        {
+            fachada.ModificarCancion(cancionVO);
+        }
+
+        [WebMethod]
+        public void InsertarCancionWS(CancionVO cancionVO)
+        {
+            fachada.InsertarCancion(cancionVO);
+        }
+
+        [WebMethod]
+        public void EliminarAlbumWS(AlbumVO albumVO)
+        {
+            fachada.EliminarAlbum(albumVO);
+        }
+
+        [WebMethod]
+        public void ModificarAlbumWS(AlbumVO albumVO)
+        {
+            fachada.ModificarAlbum(albumVO);
+        }
+
+        [WebMethod]
+        public void InsertarAlbumWS(AlbumVO albumVO)
+        {
+            fachada.InsertarAlbum(albumVO);
+        }
     }
 }

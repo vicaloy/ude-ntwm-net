@@ -1,0 +1,2 @@
+C:\Users\victo\source\repos\Oblig\Oblig\obj\Debug\Oblig.csproj.AssemblyReference.cache
+C:\Users\victo\source\repos\Oblig\Oblig\obj\Debug\Oblig.csproj.CoreCompileInputs.cache

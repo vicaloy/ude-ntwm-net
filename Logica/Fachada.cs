@@ -28,6 +28,8 @@ namespace Logica
         }
 
         DAOIntegrante daoIntegrante = DAOIntegrante.Instance();
+        DAOAlbum daoAlbum = DAOAlbum.Instance();
+        DAOCancion daoCancion = DAOCancion.Instance();
         DAOBanda daoBanda = DAOBanda.Instance();
 
         public void InsertarIntegrante(IntegranteVO integranteVO)
@@ -82,6 +84,41 @@ namespace Logica
         public BandaVO ObtenerBanda(int id)
         {
             return new BandaVO(1, "Nombre", "Genero", 1900, 0, null);
+        }
+
+        public void InsertarAlbum(AlbumVO albumVO)
+        {
+            Album album = new Album(albumVO.Id, albumVO.Nombre, albumVO.Anio, albumVO.GeneroMusical);
+            daoAlbum.InsertarAlbum(album);
+        }
+
+        public void ModificarAlbum(AlbumVO albumVO)
+        {
+            Album album = new Album(albumVO.Id, albumVO.Nombre, albumVO.Anio, albumVO.GeneroMusical);
+            daoAlbum.ModificarAlbum(album);
+        }
+
+        public void EliminarAlbum(AlbumVO albumVO)
+        {
+            Album album = new Album(albumVO.Id, albumVO.Nombre, albumVO.Anio, albumVO.GeneroMusical);
+            daoAlbum.EliminarAlbum(album);
+        }
+        public void InsertarCancion(CancionVO cancionVO)
+        {
+            Cancion cancion = new Cancion(cancionVO.Id, cancionVO.Nombre, cancionVO.Duracion, cancionVO.Anio, cancionVO.GeneroMusical);
+            daoCancion.InsertarCancion(cancion);
+        }
+
+        public void ModificarCancion(CancionVO cancionVO)
+        {
+            Cancion cancion = new Cancion(cancionVO.Id, cancionVO.Nombre, cancionVO.Duracion, cancionVO.Anio, cancionVO.GeneroMusical);
+            daoCancion.ModificarCancion(cancion);
+        }
+
+        public void EliminarCancion(CancionVO cancionVO)
+        {
+            Cancion cancion = new Cancion(cancionVO.Id, cancionVO.Nombre, cancionVO.Duracion, cancionVO.Anio, cancionVO.GeneroMusical);
+            daoCancion.EliminarCancion(cancion);
         }
     }
 }

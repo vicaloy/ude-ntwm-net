@@ -1,5 +1,4 @@
 C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.csproj.AssemblyReference.cache
-C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.FormularioForm1.Form1.resources
 C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.FormularioIntegrante.FormIntegrante.resources
 C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.Properties.Resources.resources
 C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.csproj.GenerateResource.cache

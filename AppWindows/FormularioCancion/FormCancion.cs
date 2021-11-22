@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppWindows.FormularioForm1
+namespace AppWindows.FormularioCancion
 {
-    public partial class Form1 : Form
+    public partial class FormCancion : Form
     {
-        public Form1()
+        public FormCancion()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Class1 controlador = new Class1();
-            label1.Text=controlador.Servicio();
         }
     }
 }
