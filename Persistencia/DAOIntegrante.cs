@@ -113,12 +113,44 @@ namespace Persistencia
                 integrante.Nombre = Convert.ToString(resultado["nombre"]);
                 integrante.Apellido = Convert.ToString(resultado["apellido"]);
                 integrante.FechaNacimiento = Convert.ToDateTime(resultado["nacimiento"]);
-                // integrante.Foto = Byte.Parse(resultado["foto"]);
+                //integrante.Foto = Byte.Parse(resultado["foto"]);
 
                 integrantes.Add(integrante);
             }
 
             return integrantes;
+        }
+
+        public Integrante BuscarIntegrante(Integrante integrante)
+        {
+
+            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            SqlConnection connection = new SqlConnection(con);
+
+            connection.Open();
+
+            string cmd = query.BuscarIntegrante();
+
+            SqlCommand comando = new SqlCommand(cmd, connection);
+
+            comando.Parameters.AddWithValue("@id", integrante.Id);
+
+            SqlDataReader resultado = comando.ExecuteReader();
+
+            connection.Close();
+
+            while (resultado.Read())
+            {
+
+                integrante.Id = Convert.ToInt32(resultado["id"]);
+                integrante.Nombre = Convert.ToString(resultado["nombre"]);
+                integrante.Apellido = Convert.ToString(resultado["apellido"]);
+                integrante.FechaNacimiento = Convert.ToDateTime(resultado["nacimiento"]);
+                //integrante.Foto = Byte.Parse(resultado["foto"]);
+
+            }
+
+            return integrante;
         }
 
     }

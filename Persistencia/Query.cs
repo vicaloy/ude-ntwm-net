@@ -56,5 +56,13 @@ namespace Persistencia
 
         public string ListarAlbumes() { return "SELECT * FROM dbo.album"; }
 
+        public string BuscarIntegrante() { return "SELECT * FROM dbo.integrante WHERE id = @id"; }
+
+        public string BuscarCancion() { return "SELECT * FROM dbo.cancion WHERE id = @id"; }
+
+        public string BuscarBanda() { return "SELECT * FROM dbo.banda WHERE id = @id"; }
+
+        public string BuscarAlbum() { return "SELECT * FROM dbo.album WHERE id = @id"; }
+
     }
 }
