@@ -132,19 +132,21 @@ namespace Persistencia
             return integrantes;
         }
 
-        public Integrante BuscarIntegrante(Integrante integrante)
+        public Integrante BuscarIntegrante(int bId)
         {
+
+            Integrante integrante = new Integrante();
 
             String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             SqlConnection connection = new SqlConnection(con);
 
             connection.Open();
 
-            string cmd = "";// query.BuscarIntegrante();
+            string cmd = query.BuscarIntegrante();
 
             SqlCommand comando = new SqlCommand(cmd, connection);
 
-            comando.Parameters.AddWithValue("@id", integrante.Id);
+            comando.Parameters.AddWithValue("@id", bId);
 
             SqlDataReader resultado = comando.ExecuteReader();
 

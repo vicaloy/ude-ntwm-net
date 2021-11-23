@@ -133,7 +133,7 @@ namespace Persistencia
 
             connection.Open();
 
-            string cmd = "";// query.EliminarBandaCancion();
+            string cmd = query.EliminarBandaCancion();
 
             SqlCommand comando = new SqlCommand(cmd, connection);
 
@@ -179,6 +179,40 @@ namespace Persistencia
             }
 
             return canciones;
+        }
+
+        public Cancion BuscarCancion(int bId)
+        {
+
+            Cancion cancion = new Cancion();
+
+            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            SqlConnection connection = new SqlConnection(con);
+
+            connection.Open();
+
+            string cmd = query.BuscarCancion();
+
+            SqlCommand comando = new SqlCommand(cmd, connection);
+
+            comando.Parameters.AddWithValue("@id", bId);
+
+            SqlDataReader resultado = comando.ExecuteReader();
+
+            connection.Close();
+
+            while (resultado.Read())
+            {
+
+                cancion.Id = Convert.ToInt32(resultado["id"]);
+                cancion.Nombre = Convert.ToString(resultado["nombre"]);
+                cancion.Anio = Convert.ToInt32(resultado["anio"]);
+                cancion.Duracion = Convert.ToInt32(resultado["duracion"]);
+                cancion.GeneroMusical = Convert.ToString(resultado["genero"]);
+
+            }
+
+            return cancion;
         }
 
     }
