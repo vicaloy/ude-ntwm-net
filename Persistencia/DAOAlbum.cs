@@ -15,9 +15,20 @@ namespace Persistencia
 
         public Query query = new Query();
 
-        public DAOAlbum()
+        static DAOAlbum instance;
+
+        private DAOAlbum()
         {
 
+        }
+
+        public static DAOAlbum Instance()
+        {
+            if (instance == null)
+            {
+                instance = new DAOAlbum();
+            }
+            return instance;
         }
 
         public void InsertarAlbum(Album album)
@@ -36,7 +47,7 @@ namespace Persistencia
             comando.Parameters.AddWithValue("@anio_creacion", album.Anio);
             comando.Parameters.AddWithValue("@nombre", album.Nombre);
             comando.Parameters.AddWithValue("@genero", album.GeneroMusical);
-            comando.Parameters.AddWithValue("@banda", album.Banda);
+            comando.Parameters.AddWithValue("@banda", album.Band.Id);
 
             comando.ExecuteNonQuery();
 
@@ -59,7 +70,7 @@ namespace Persistencia
             comando.Parameters.AddWithValue("@anio_creacion", album.Anio);
             comando.Parameters.AddWithValue("@nombre", album.Nombre);
             comando.Parameters.AddWithValue("@genero", album.GeneroMusical);
-            comando.Parameters.AddWithValue("@banda", album.Banda);
+            comando.Parameters.AddWithValue("@banda", album.Band.Id);
 
             comando.ExecuteNonQuery();
 
@@ -121,7 +132,7 @@ namespace Persistencia
 
             connection.Open();
 
-            string cmd = query.EliminarCancionAlbum();
+            string cmd = "";//query.EliminarCancionAlbum();
 
             SqlCommand comando = new SqlCommand(cmd, connection);
 
@@ -160,7 +171,8 @@ namespace Persistencia
                 album.Id = Convert.ToInt32(resultado["id"]);
                 album.Nombre = Convert.ToString(resultado["nombre"]);
                 album.Anio = Convert.ToInt32(resultado["anio_creacion"]);
-                album.Banda = Convert.ToInt32(resultado["id_banda"]);
+                album.Band = new Banda();
+                album.Band.Id = Convert.ToInt32(resultado["id_banda"]);
                 album.GeneroMusical = Convert.ToString(resultado["genero"]);
 
                 albums.Add(album);

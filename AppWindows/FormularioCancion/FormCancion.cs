@@ -12,6 +12,7 @@ namespace AppWindows.FormularioCancion
 {
     public partial class FormCancion : Form
     {
+        CancionControlador controlador = new CancionControlador();
         public FormCancion()
         {
             InitializeComponent();
@@ -19,27 +20,44 @@ namespace AppWindows.FormularioCancion
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            lblError.Text = controlador.InsertarCancionForm(txtId.Text, txtNombre.Text, txtDuracion.Text, txtAnio.Text, txtGenero.Text);
 
         }
 
         private void btnModifcar_Click(object sender, EventArgs e)
         {
+            lblError.Text = controlador.ModificarCancionForm(txtId.Text, txtNombre.Text, txtDuracion.Text, txtAnio.Text, txtGenero.Text);
 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            lblError.Text = controlador.EliminarCancionForm(txtId.Text, txtNombre.Text, txtDuracion.Text, txtAnio.Text, txtGenero.Text);
 
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            ServiceReference.BandaVO banda = controlador.ObtenerBandaForm(txtBandaId.Text);
+            if (banda != null)
+            {
+                lblBanda.Text = $"{banda.Nombre} {banda.GeneroMusical}";
+                controlador.AgregarBanda(banda);
+            }
+            else
+            {
+                lblBanda.Text = "No existe banda";
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            ServiceReference.CancionVO cancion = controlador.ObtenerCancionForm(txtId.Text);
+            txtAnio.Text = cancion.Anio.ToString();
+            txtDuracion.Text = cancion.Duracion.ToString();
+            txtGenero.Text = cancion.GeneroMusical;
+            txtId.Text = cancion.Id.ToString();
+            txtNombre.Text = cancion.Nombre;
         }
     }
 }

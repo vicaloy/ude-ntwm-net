@@ -15,10 +15,22 @@ namespace Persistencia
 
         public Query query = new Query();
 
-        public DAOCancion()
+        static DAOCancion instance;
+
+        private DAOCancion()
         {
 
         }
+
+        public static DAOCancion Instance()
+        {
+            if (instance == null)
+            {
+                instance = new DAOCancion();
+            }
+            return instance;
+        }
+
 
         public void InsertarCancion(Cancion cancion)
         {
@@ -121,7 +133,7 @@ namespace Persistencia
 
             connection.Open();
 
-            string cmd = query.EliminarBandaCancion();
+            string cmd = "";// query.EliminarBandaCancion();
 
             SqlCommand comando = new SqlCommand(cmd, connection);
 

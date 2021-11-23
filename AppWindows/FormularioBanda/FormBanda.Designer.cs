@@ -199,9 +199,8 @@ namespace AppWindows.FormularioBanda
             this.lblIntegrante.AutoSize = true;
             this.lblIntegrante.Location = new System.Drawing.Point(529, 200);
             this.lblIntegrante.Name = "lblIntegrante";
-            this.lblIntegrante.Size = new System.Drawing.Size(44, 13);
+            this.lblIntegrante.Size = new System.Drawing.Size(0, 13);
             this.lblIntegrante.TabIndex = 25;
-            this.lblIntegrante.Text = "Nombre";
             // 
             // btnAgregar
             // 

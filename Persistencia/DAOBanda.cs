@@ -16,9 +16,20 @@ namespace Persistencia
 
         public Query query = new Query();
 
-        public DAOBanda()
+        static DAOBanda instance;
+
+        private DAOBanda()
         {
 
+        }
+
+        public static DAOBanda Instance()
+        {
+            if (instance == null)
+            {
+                instance = new DAOBanda();
+            }
+            return instance;
         }
 
         public void InsertarBanda(Banda banda)
@@ -122,7 +133,7 @@ namespace Persistencia
 
             connection.Open();
 
-            string cmd = query.EliminarIntegranteBanda();
+            string cmd = ""; //query.EliminarIntegranteBanda();
 
             SqlCommand comando = new SqlCommand(cmd, connection);
 

@@ -63,7 +63,7 @@ namespace AppWindows.FormularioCancion
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(245, 220);
+            this.lblError.Location = new System.Drawing.Point(257, 311);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 13);
             this.lblError.TabIndex = 33;
@@ -181,7 +181,7 @@ namespace AppWindows.FormularioCancion
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(188, 220);
+            this.label6.Location = new System.Drawing.Point(186, 215);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(38, 13);
@@ -190,7 +190,7 @@ namespace AppWindows.FormularioCancion
             // 
             // txtBandaId
             // 
-            this.txtBandaId.Location = new System.Drawing.Point(245, 217);
+            this.txtBandaId.Location = new System.Drawing.Point(245, 212);
             this.txtBandaId.Name = "txtBandaId";
             this.txtBandaId.Size = new System.Drawing.Size(250, 20);
             this.txtBandaId.TabIndex = 38;

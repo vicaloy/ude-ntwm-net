@@ -86,6 +86,12 @@ namespace AppWeb
         }
 
         [WebMethod]
+        public CancionVO ObtenerCancionWS(int id)
+        {
+            return fachada.ObtenerCancion(id);
+        }
+
+        [WebMethod]
         public void EliminarAlbumWS(AlbumVO albumVO)
         {
             fachada.EliminarAlbum(albumVO);
@@ -101,6 +107,12 @@ namespace AppWeb
         public void InsertarAlbumWS(AlbumVO albumVO)
         {
             fachada.InsertarAlbum(albumVO);
+        }
+
+        [WebMethod]
+        public AlbumVO ObtenerAlbumWS(int id)
+        {
+            return fachada.ObtenerAlbum(id);
         }
     }
 }

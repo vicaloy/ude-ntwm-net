@@ -22,8 +22,10 @@ namespace Logica
         void InsertarAlbum(AlbumVO albumVO);
         void ModificarAlbum(AlbumVO albumVO);
         void EliminarAlbum(AlbumVO albumVO);
+        AlbumVO ObtenerAlbum(int id);
         void InsertarCancion(CancionVO cancionVO);
         void ModificarCancion(CancionVO cancionVO);
         void EliminarCancion(CancionVO cancionVO);
+        CancionVO ObtenerCancion(int id);
     }
 }

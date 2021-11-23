@@ -12,19 +12,19 @@ namespace Modelos
         public string Nombre { get; set; }
         public int Anio { get; set; }
         public string GeneroMusical { get; set; }
-        public int Banda { get; set; }
+        public Banda Band { get; set; }
         public List<Cancion> Canciones { get; set; }
 
         public Album() { }
 
-        public Album(int nId, string nNombre, int nAnio, string nGeneroMusica, int nBanda)
+        public Album(int nId, string nNombre, int nAnio, string nGeneroMusica, Banda nBanda)
         {
 
             Id = nId;
             Nombre = nNombre;
             Anio = nAnio;
             GeneroMusical = nGeneroMusica;
-            Banda = nBanda;
+            Band = nBanda;
 
         }
 

@@ -114,6 +114,124 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="EliminarCancionWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cancionVO" type="tns:CancionVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CancionVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Duracion" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Anio" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneroMusical" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bandas" type="tns:ArrayOfBandaVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBandaVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BandaVO" nillable="true" type="tns:BandaVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EliminarCancionWSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModificarCancionWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cancionVO" type="tns:CancionVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarCancionWSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertarCancionWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cancionVO" type="tns:CancionVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarCancionWSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerCancionWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCancionWSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCancionWSResult" type="tns:CancionVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarAlbumWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="albumVO" type="tns:AlbumVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AlbumVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Anio" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneroMusical" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Band" type="tns:BandaVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="Canciones" type="tns:ArrayOfCancionVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCancionVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CancionVO" nillable="true" type="tns:CancionVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EliminarAlbumWSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModificarAlbumWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="albumVO" type="tns:AlbumVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarAlbumWSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertarAlbumWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="albumVO" type="tns:AlbumVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarAlbumWSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerAlbumWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerAlbumWSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerAlbumWSResult" type="tns:AlbumVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="InsertarIntegranteWSSoapIn">
@@ -164,6 +282,54 @@
   <wsdl:message name="ObtenerBandaWSSoapOut">
     <wsdl:part name="parameters" element="tns:ObtenerBandaWSResponse" />
   </wsdl:message>
+  <wsdl:message name="EliminarCancionWSSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarCancionWS" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCancionWSSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarCancionWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCancionWSSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarCancionWS" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCancionWSSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarCancionWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarCancionWSSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarCancionWS" />
+  </wsdl:message>
+  <wsdl:message name="InsertarCancionWSSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarCancionWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCancionWSSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCancionWS" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCancionWSSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCancionWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarAlbumWSSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarAlbumWS" />
+  </wsdl:message>
+  <wsdl:message name="EliminarAlbumWSSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarAlbumWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarAlbumWSSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarAlbumWS" />
+  </wsdl:message>
+  <wsdl:message name="ModificarAlbumWSSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarAlbumWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAlbumWSSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarAlbumWS" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAlbumWSSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarAlbumWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerAlbumWSSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerAlbumWS" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerAlbumWSSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerAlbumWSResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServicioWebSoap">
     <wsdl:operation name="InsertarIntegranteWS">
       <wsdl:input message="tns:InsertarIntegranteWSSoapIn" />
@@ -196,6 +362,38 @@
     <wsdl:operation name="ObtenerBandaWS">
       <wsdl:input message="tns:ObtenerBandaWSSoapIn" />
       <wsdl:output message="tns:ObtenerBandaWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCancionWS">
+      <wsdl:input message="tns:EliminarCancionWSSoapIn" />
+      <wsdl:output message="tns:EliminarCancionWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCancionWS">
+      <wsdl:input message="tns:ModificarCancionWSSoapIn" />
+      <wsdl:output message="tns:ModificarCancionWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCancionWS">
+      <wsdl:input message="tns:InsertarCancionWSSoapIn" />
+      <wsdl:output message="tns:InsertarCancionWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCancionWS">
+      <wsdl:input message="tns:ObtenerCancionWSSoapIn" />
+      <wsdl:output message="tns:ObtenerCancionWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAlbumWS">
+      <wsdl:input message="tns:EliminarAlbumWSSoapIn" />
+      <wsdl:output message="tns:EliminarAlbumWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAlbumWS">
+      <wsdl:input message="tns:ModificarAlbumWSSoapIn" />
+      <wsdl:output message="tns:ModificarAlbumWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAlbumWS">
+      <wsdl:input message="tns:InsertarAlbumWSSoapIn" />
+      <wsdl:output message="tns:InsertarAlbumWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAlbumWS">
+      <wsdl:input message="tns:ObtenerAlbumWSSoapIn" />
+      <wsdl:output message="tns:ObtenerAlbumWSSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServicioWebSoap" type="tns:ServicioWebSoap">
@@ -272,6 +470,78 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="EliminarCancionWS">
+      <soap:operation soapAction="http://tempuri.org/EliminarCancionWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCancionWS">
+      <soap:operation soapAction="http://tempuri.org/ModificarCancionWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCancionWS">
+      <soap:operation soapAction="http://tempuri.org/InsertarCancionWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCancionWS">
+      <soap:operation soapAction="http://tempuri.org/ObtenerCancionWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAlbumWS">
+      <soap:operation soapAction="http://tempuri.org/EliminarAlbumWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAlbumWS">
+      <soap:operation soapAction="http://tempuri.org/ModificarAlbumWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAlbumWS">
+      <soap:operation soapAction="http://tempuri.org/InsertarAlbumWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAlbumWS">
+      <soap:operation soapAction="http://tempuri.org/ObtenerAlbumWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServicioWebSoap12" type="tns:ServicioWebSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -340,6 +610,78 @@
     </wsdl:operation>
     <wsdl:operation name="ObtenerBandaWS">
       <soap12:operation soapAction="http://tempuri.org/ObtenerBandaWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCancionWS">
+      <soap12:operation soapAction="http://tempuri.org/EliminarCancionWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCancionWS">
+      <soap12:operation soapAction="http://tempuri.org/ModificarCancionWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCancionWS">
+      <soap12:operation soapAction="http://tempuri.org/InsertarCancionWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCancionWS">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerCancionWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAlbumWS">
+      <soap12:operation soapAction="http://tempuri.org/EliminarAlbumWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAlbumWS">
+      <soap12:operation soapAction="http://tempuri.org/ModificarAlbumWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAlbumWS">
+      <soap12:operation soapAction="http://tempuri.org/InsertarAlbumWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAlbumWS">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerAlbumWS" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -15,9 +15,20 @@ namespace Persistencia
 
         public Query query = new Query();
 
-        public DAOIntegrante()
+        static DAOIntegrante instance;
+
+        private DAOIntegrante()
         {
 
+        }
+
+        public static DAOIntegrante Instance()
+        {
+            if (instance == null)
+            {
+                instance = new DAOIntegrante();
+            }
+            return instance;
         }
 
         public void InsertarIntegrante(Integrante integrante)
@@ -129,7 +140,7 @@ namespace Persistencia
 
             connection.Open();
 
-            string cmd = query.BuscarIntegrante();
+            string cmd = "";// query.BuscarIntegrante();
 
             SqlCommand comando = new SqlCommand(cmd, connection);
 

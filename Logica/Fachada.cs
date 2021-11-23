@@ -13,7 +13,7 @@ namespace Logica
     {
         static Fachada instance;
 
-        public Fachada()
+        private Fachada()
         {
 
         }
@@ -88,20 +88,34 @@ namespace Logica
 
         public void InsertarAlbum(AlbumVO albumVO)
         {
-            Album album = new Album(albumVO.Id, albumVO.Nombre, albumVO.Anio, albumVO.GeneroMusical);
+            Banda band = new Banda(albumVO.Band.Id, albumVO.Band.Nombre, albumVO.Band.GeneroMusical, albumVO.Band.AnioCreacion, albumVO.Band.AnioSeparacion);
+            Album album = new Album(albumVO.Id, albumVO.Nombre, albumVO.Anio, albumVO.GeneroMusical, band);
             daoAlbum.InsertarAlbum(album);
         }
 
         public void ModificarAlbum(AlbumVO albumVO)
         {
-            Album album = new Album(albumVO.Id, albumVO.Nombre, albumVO.Anio, albumVO.GeneroMusical);
+            Banda band = new Banda(albumVO.Band.Id, albumVO.Band.Nombre, albumVO.Band.GeneroMusical, albumVO.Band.AnioCreacion, albumVO.Band.AnioSeparacion);
+            Album album = new Album(albumVO.Id, albumVO.Nombre, albumVO.Anio, albumVO.GeneroMusical, band);
             daoAlbum.ModificarAlbum(album);
         }
 
         public void EliminarAlbum(AlbumVO albumVO)
         {
-            Album album = new Album(albumVO.Id, albumVO.Nombre, albumVO.Anio, albumVO.GeneroMusical);
+            Banda band = new Banda(albumVO.Band.Id, albumVO.Band.Nombre, albumVO.Band.GeneroMusical, albumVO.Band.AnioCreacion, albumVO.Band.AnioSeparacion);
+            Album album = new Album(albumVO.Id, albumVO.Nombre, albumVO.Anio, albumVO.GeneroMusical, band);
             daoAlbum.EliminarAlbum(album);
+        }
+
+        public AlbumVO ObtenerAlbum(int id) {
+            AlbumVO a= new AlbumVO();
+            a.Nombre = "Album";
+            a.GeneroMusical = "Genero";
+            a.Id = 1;
+            a.Band = new BandaVO();
+            a.Band.Nombre = "Banda";
+
+            return a;
         }
         public void InsertarCancion(CancionVO cancionVO)
         {
@@ -119,6 +133,16 @@ namespace Logica
         {
             Cancion cancion = new Cancion(cancionVO.Id, cancionVO.Nombre, cancionVO.Duracion, cancionVO.Anio, cancionVO.GeneroMusical);
             daoCancion.EliminarCancion(cancion);
+        }
+
+        public CancionVO ObtenerCancion(int id)
+        {
+            CancionVO cancionVO = new CancionVO();
+            cancionVO.Nombre = "Nombre";
+            cancionVO.GeneroMusical = "Genero";
+            cancionVO.Id = 1;
+            cancionVO.Anio = 123;
+            return cancionVO;
         }
     }
 }

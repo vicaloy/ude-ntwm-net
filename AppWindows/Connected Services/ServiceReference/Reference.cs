@@ -242,6 +242,251 @@ namespace AppWindows.ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CancionVO", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class CancionVO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        private float DuracionField;
+        
+        private int AnioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GeneroMusicalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AppWindows.ServiceReference.BandaVO[] BandasField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public float Duracion {
+            get {
+                return this.DuracionField;
+            }
+            set {
+                if ((this.DuracionField.Equals(value) != true)) {
+                    this.DuracionField = value;
+                    this.RaisePropertyChanged("Duracion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public int Anio {
+            get {
+                return this.AnioField;
+            }
+            set {
+                if ((this.AnioField.Equals(value) != true)) {
+                    this.AnioField = value;
+                    this.RaisePropertyChanged("Anio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string GeneroMusical {
+            get {
+                return this.GeneroMusicalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GeneroMusicalField, value) != true)) {
+                    this.GeneroMusicalField = value;
+                    this.RaisePropertyChanged("GeneroMusical");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public AppWindows.ServiceReference.BandaVO[] Bandas {
+            get {
+                return this.BandasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BandasField, value) != true)) {
+                    this.BandasField = value;
+                    this.RaisePropertyChanged("Bandas");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AlbumVO", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class AlbumVO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        private int AnioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GeneroMusicalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AppWindows.ServiceReference.BandaVO BandField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AppWindows.ServiceReference.CancionVO[] CancionesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int Anio {
+            get {
+                return this.AnioField;
+            }
+            set {
+                if ((this.AnioField.Equals(value) != true)) {
+                    this.AnioField = value;
+                    this.RaisePropertyChanged("Anio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string GeneroMusical {
+            get {
+                return this.GeneroMusicalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GeneroMusicalField, value) != true)) {
+                    this.GeneroMusicalField = value;
+                    this.RaisePropertyChanged("GeneroMusical");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public AppWindows.ServiceReference.BandaVO Band {
+            get {
+                return this.BandField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BandField, value) != true)) {
+                    this.BandField = value;
+                    this.RaisePropertyChanged("Band");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public AppWindows.ServiceReference.CancionVO[] Canciones {
+            get {
+                return this.CancionesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CancionesField, value) != true)) {
+                    this.CancionesField = value;
+                    this.RaisePropertyChanged("Canciones");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.ServicioWebSoap")]
     public interface ServicioWebSoap {
@@ -301,6 +546,62 @@ namespace AppWindows.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerBandaWS", ReplyAction="*")]
         System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerBandaWSResponse> ObtenerBandaWSAsync(AppWindows.ServiceReference.ObtenerBandaWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento cancionVO del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarCancionWS", ReplyAction="*")]
+        AppWindows.ServiceReference.EliminarCancionWSResponse EliminarCancionWS(AppWindows.ServiceReference.EliminarCancionWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarCancionWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.EliminarCancionWSResponse> EliminarCancionWSAsync(AppWindows.ServiceReference.EliminarCancionWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento cancionVO del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarCancionWS", ReplyAction="*")]
+        AppWindows.ServiceReference.ModificarCancionWSResponse ModificarCancionWS(AppWindows.ServiceReference.ModificarCancionWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarCancionWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ModificarCancionWSResponse> ModificarCancionWSAsync(AppWindows.ServiceReference.ModificarCancionWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento cancionVO del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertarCancionWS", ReplyAction="*")]
+        AppWindows.ServiceReference.InsertarCancionWSResponse InsertarCancionWS(AppWindows.ServiceReference.InsertarCancionWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertarCancionWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.InsertarCancionWSResponse> InsertarCancionWSAsync(AppWindows.ServiceReference.InsertarCancionWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ObtenerCancionWSResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerCancionWS", ReplyAction="*")]
+        AppWindows.ServiceReference.ObtenerCancionWSResponse ObtenerCancionWS(AppWindows.ServiceReference.ObtenerCancionWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerCancionWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerCancionWSResponse> ObtenerCancionWSAsync(AppWindows.ServiceReference.ObtenerCancionWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento albumVO del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarAlbumWS", ReplyAction="*")]
+        AppWindows.ServiceReference.EliminarAlbumWSResponse EliminarAlbumWS(AppWindows.ServiceReference.EliminarAlbumWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarAlbumWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.EliminarAlbumWSResponse> EliminarAlbumWSAsync(AppWindows.ServiceReference.EliminarAlbumWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento albumVO del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarAlbumWS", ReplyAction="*")]
+        AppWindows.ServiceReference.ModificarAlbumWSResponse ModificarAlbumWS(AppWindows.ServiceReference.ModificarAlbumWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarAlbumWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ModificarAlbumWSResponse> ModificarAlbumWSAsync(AppWindows.ServiceReference.ModificarAlbumWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento albumVO del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertarAlbumWS", ReplyAction="*")]
+        AppWindows.ServiceReference.InsertarAlbumWSResponse InsertarAlbumWS(AppWindows.ServiceReference.InsertarAlbumWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertarAlbumWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.InsertarAlbumWSResponse> InsertarAlbumWSAsync(AppWindows.ServiceReference.InsertarAlbumWSRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ObtenerAlbumWSResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerAlbumWS", ReplyAction="*")]
+        AppWindows.ServiceReference.ObtenerAlbumWSResponse ObtenerAlbumWS(AppWindows.ServiceReference.ObtenerAlbumWSRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerAlbumWS", ReplyAction="*")]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerAlbumWSResponse> ObtenerAlbumWSAsync(AppWindows.ServiceReference.ObtenerAlbumWSRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -805,6 +1106,508 @@ namespace AppWindows.ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EliminarCancionWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EliminarCancionWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.EliminarCancionWSRequestBody Body;
+        
+        public EliminarCancionWSRequest() {
+        }
+        
+        public EliminarCancionWSRequest(AppWindows.ServiceReference.EliminarCancionWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class EliminarCancionWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.CancionVO cancionVO;
+        
+        public EliminarCancionWSRequestBody() {
+        }
+        
+        public EliminarCancionWSRequestBody(AppWindows.ServiceReference.CancionVO cancionVO) {
+            this.cancionVO = cancionVO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EliminarCancionWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EliminarCancionWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.EliminarCancionWSResponseBody Body;
+        
+        public EliminarCancionWSResponse() {
+        }
+        
+        public EliminarCancionWSResponse(AppWindows.ServiceReference.EliminarCancionWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class EliminarCancionWSResponseBody {
+        
+        public EliminarCancionWSResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ModificarCancionWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarCancionWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ModificarCancionWSRequestBody Body;
+        
+        public ModificarCancionWSRequest() {
+        }
+        
+        public ModificarCancionWSRequest(AppWindows.ServiceReference.ModificarCancionWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ModificarCancionWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.CancionVO cancionVO;
+        
+        public ModificarCancionWSRequestBody() {
+        }
+        
+        public ModificarCancionWSRequestBody(AppWindows.ServiceReference.CancionVO cancionVO) {
+            this.cancionVO = cancionVO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ModificarCancionWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarCancionWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ModificarCancionWSResponseBody Body;
+        
+        public ModificarCancionWSResponse() {
+        }
+        
+        public ModificarCancionWSResponse(AppWindows.ServiceReference.ModificarCancionWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class ModificarCancionWSResponseBody {
+        
+        public ModificarCancionWSResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class InsertarCancionWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarCancionWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.InsertarCancionWSRequestBody Body;
+        
+        public InsertarCancionWSRequest() {
+        }
+        
+        public InsertarCancionWSRequest(AppWindows.ServiceReference.InsertarCancionWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class InsertarCancionWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.CancionVO cancionVO;
+        
+        public InsertarCancionWSRequestBody() {
+        }
+        
+        public InsertarCancionWSRequestBody(AppWindows.ServiceReference.CancionVO cancionVO) {
+            this.cancionVO = cancionVO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class InsertarCancionWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarCancionWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.InsertarCancionWSResponseBody Body;
+        
+        public InsertarCancionWSResponse() {
+        }
+        
+        public InsertarCancionWSResponse(AppWindows.ServiceReference.InsertarCancionWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class InsertarCancionWSResponseBody {
+        
+        public InsertarCancionWSResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerCancionWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerCancionWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ObtenerCancionWSRequestBody Body;
+        
+        public ObtenerCancionWSRequest() {
+        }
+        
+        public ObtenerCancionWSRequest(AppWindows.ServiceReference.ObtenerCancionWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerCancionWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        public ObtenerCancionWSRequestBody() {
+        }
+        
+        public ObtenerCancionWSRequestBody(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerCancionWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerCancionWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ObtenerCancionWSResponseBody Body;
+        
+        public ObtenerCancionWSResponse() {
+        }
+        
+        public ObtenerCancionWSResponse(AppWindows.ServiceReference.ObtenerCancionWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerCancionWSResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.CancionVO ObtenerCancionWSResult;
+        
+        public ObtenerCancionWSResponseBody() {
+        }
+        
+        public ObtenerCancionWSResponseBody(AppWindows.ServiceReference.CancionVO ObtenerCancionWSResult) {
+            this.ObtenerCancionWSResult = ObtenerCancionWSResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EliminarAlbumWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EliminarAlbumWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.EliminarAlbumWSRequestBody Body;
+        
+        public EliminarAlbumWSRequest() {
+        }
+        
+        public EliminarAlbumWSRequest(AppWindows.ServiceReference.EliminarAlbumWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class EliminarAlbumWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.AlbumVO albumVO;
+        
+        public EliminarAlbumWSRequestBody() {
+        }
+        
+        public EliminarAlbumWSRequestBody(AppWindows.ServiceReference.AlbumVO albumVO) {
+            this.albumVO = albumVO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EliminarAlbumWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EliminarAlbumWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.EliminarAlbumWSResponseBody Body;
+        
+        public EliminarAlbumWSResponse() {
+        }
+        
+        public EliminarAlbumWSResponse(AppWindows.ServiceReference.EliminarAlbumWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class EliminarAlbumWSResponseBody {
+        
+        public EliminarAlbumWSResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ModificarAlbumWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarAlbumWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ModificarAlbumWSRequestBody Body;
+        
+        public ModificarAlbumWSRequest() {
+        }
+        
+        public ModificarAlbumWSRequest(AppWindows.ServiceReference.ModificarAlbumWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ModificarAlbumWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.AlbumVO albumVO;
+        
+        public ModificarAlbumWSRequestBody() {
+        }
+        
+        public ModificarAlbumWSRequestBody(AppWindows.ServiceReference.AlbumVO albumVO) {
+            this.albumVO = albumVO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ModificarAlbumWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarAlbumWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ModificarAlbumWSResponseBody Body;
+        
+        public ModificarAlbumWSResponse() {
+        }
+        
+        public ModificarAlbumWSResponse(AppWindows.ServiceReference.ModificarAlbumWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class ModificarAlbumWSResponseBody {
+        
+        public ModificarAlbumWSResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class InsertarAlbumWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarAlbumWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.InsertarAlbumWSRequestBody Body;
+        
+        public InsertarAlbumWSRequest() {
+        }
+        
+        public InsertarAlbumWSRequest(AppWindows.ServiceReference.InsertarAlbumWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class InsertarAlbumWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.AlbumVO albumVO;
+        
+        public InsertarAlbumWSRequestBody() {
+        }
+        
+        public InsertarAlbumWSRequestBody(AppWindows.ServiceReference.AlbumVO albumVO) {
+            this.albumVO = albumVO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class InsertarAlbumWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarAlbumWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.InsertarAlbumWSResponseBody Body;
+        
+        public InsertarAlbumWSResponse() {
+        }
+        
+        public InsertarAlbumWSResponse(AppWindows.ServiceReference.InsertarAlbumWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class InsertarAlbumWSResponseBody {
+        
+        public InsertarAlbumWSResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerAlbumWSRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerAlbumWS", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ObtenerAlbumWSRequestBody Body;
+        
+        public ObtenerAlbumWSRequest() {
+        }
+        
+        public ObtenerAlbumWSRequest(AppWindows.ServiceReference.ObtenerAlbumWSRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerAlbumWSRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        public ObtenerAlbumWSRequestBody() {
+        }
+        
+        public ObtenerAlbumWSRequestBody(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerAlbumWSResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerAlbumWSResponse", Namespace="http://tempuri.org/", Order=0)]
+        public AppWindows.ServiceReference.ObtenerAlbumWSResponseBody Body;
+        
+        public ObtenerAlbumWSResponse() {
+        }
+        
+        public ObtenerAlbumWSResponse(AppWindows.ServiceReference.ObtenerAlbumWSResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerAlbumWSResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public AppWindows.ServiceReference.AlbumVO ObtenerAlbumWSResult;
+        
+        public ObtenerAlbumWSResponseBody() {
+        }
+        
+        public ObtenerAlbumWSResponseBody(AppWindows.ServiceReference.AlbumVO ObtenerAlbumWSResult) {
+            this.ObtenerAlbumWSResult = ObtenerAlbumWSResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ServicioWebSoapChannel : AppWindows.ServiceReference.ServicioWebSoap, System.ServiceModel.IClientChannel {
     }
@@ -1024,6 +1827,200 @@ namespace AppWindows.ServiceReference {
             inValue.Body = new AppWindows.ServiceReference.ObtenerBandaWSRequestBody();
             inValue.Body.id = id;
             return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ObtenerBandaWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.EliminarCancionWSResponse AppWindows.ServiceReference.ServicioWebSoap.EliminarCancionWS(AppWindows.ServiceReference.EliminarCancionWSRequest request) {
+            return base.Channel.EliminarCancionWS(request);
+        }
+        
+        public void EliminarCancionWS(AppWindows.ServiceReference.CancionVO cancionVO) {
+            AppWindows.ServiceReference.EliminarCancionWSRequest inValue = new AppWindows.ServiceReference.EliminarCancionWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.EliminarCancionWSRequestBody();
+            inValue.Body.cancionVO = cancionVO;
+            AppWindows.ServiceReference.EliminarCancionWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).EliminarCancionWS(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.EliminarCancionWSResponse> AppWindows.ServiceReference.ServicioWebSoap.EliminarCancionWSAsync(AppWindows.ServiceReference.EliminarCancionWSRequest request) {
+            return base.Channel.EliminarCancionWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.EliminarCancionWSResponse> EliminarCancionWSAsync(AppWindows.ServiceReference.CancionVO cancionVO) {
+            AppWindows.ServiceReference.EliminarCancionWSRequest inValue = new AppWindows.ServiceReference.EliminarCancionWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.EliminarCancionWSRequestBody();
+            inValue.Body.cancionVO = cancionVO;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).EliminarCancionWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.ModificarCancionWSResponse AppWindows.ServiceReference.ServicioWebSoap.ModificarCancionWS(AppWindows.ServiceReference.ModificarCancionWSRequest request) {
+            return base.Channel.ModificarCancionWS(request);
+        }
+        
+        public void ModificarCancionWS(AppWindows.ServiceReference.CancionVO cancionVO) {
+            AppWindows.ServiceReference.ModificarCancionWSRequest inValue = new AppWindows.ServiceReference.ModificarCancionWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ModificarCancionWSRequestBody();
+            inValue.Body.cancionVO = cancionVO;
+            AppWindows.ServiceReference.ModificarCancionWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ModificarCancionWS(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ModificarCancionWSResponse> AppWindows.ServiceReference.ServicioWebSoap.ModificarCancionWSAsync(AppWindows.ServiceReference.ModificarCancionWSRequest request) {
+            return base.Channel.ModificarCancionWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.ModificarCancionWSResponse> ModificarCancionWSAsync(AppWindows.ServiceReference.CancionVO cancionVO) {
+            AppWindows.ServiceReference.ModificarCancionWSRequest inValue = new AppWindows.ServiceReference.ModificarCancionWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ModificarCancionWSRequestBody();
+            inValue.Body.cancionVO = cancionVO;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ModificarCancionWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.InsertarCancionWSResponse AppWindows.ServiceReference.ServicioWebSoap.InsertarCancionWS(AppWindows.ServiceReference.InsertarCancionWSRequest request) {
+            return base.Channel.InsertarCancionWS(request);
+        }
+        
+        public void InsertarCancionWS(AppWindows.ServiceReference.CancionVO cancionVO) {
+            AppWindows.ServiceReference.InsertarCancionWSRequest inValue = new AppWindows.ServiceReference.InsertarCancionWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.InsertarCancionWSRequestBody();
+            inValue.Body.cancionVO = cancionVO;
+            AppWindows.ServiceReference.InsertarCancionWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).InsertarCancionWS(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.InsertarCancionWSResponse> AppWindows.ServiceReference.ServicioWebSoap.InsertarCancionWSAsync(AppWindows.ServiceReference.InsertarCancionWSRequest request) {
+            return base.Channel.InsertarCancionWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.InsertarCancionWSResponse> InsertarCancionWSAsync(AppWindows.ServiceReference.CancionVO cancionVO) {
+            AppWindows.ServiceReference.InsertarCancionWSRequest inValue = new AppWindows.ServiceReference.InsertarCancionWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.InsertarCancionWSRequestBody();
+            inValue.Body.cancionVO = cancionVO;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).InsertarCancionWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.ObtenerCancionWSResponse AppWindows.ServiceReference.ServicioWebSoap.ObtenerCancionWS(AppWindows.ServiceReference.ObtenerCancionWSRequest request) {
+            return base.Channel.ObtenerCancionWS(request);
+        }
+        
+        public AppWindows.ServiceReference.CancionVO ObtenerCancionWS(int id) {
+            AppWindows.ServiceReference.ObtenerCancionWSRequest inValue = new AppWindows.ServiceReference.ObtenerCancionWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ObtenerCancionWSRequestBody();
+            inValue.Body.id = id;
+            AppWindows.ServiceReference.ObtenerCancionWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ObtenerCancionWS(inValue);
+            return retVal.Body.ObtenerCancionWSResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerCancionWSResponse> AppWindows.ServiceReference.ServicioWebSoap.ObtenerCancionWSAsync(AppWindows.ServiceReference.ObtenerCancionWSRequest request) {
+            return base.Channel.ObtenerCancionWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerCancionWSResponse> ObtenerCancionWSAsync(int id) {
+            AppWindows.ServiceReference.ObtenerCancionWSRequest inValue = new AppWindows.ServiceReference.ObtenerCancionWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ObtenerCancionWSRequestBody();
+            inValue.Body.id = id;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ObtenerCancionWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.EliminarAlbumWSResponse AppWindows.ServiceReference.ServicioWebSoap.EliminarAlbumWS(AppWindows.ServiceReference.EliminarAlbumWSRequest request) {
+            return base.Channel.EliminarAlbumWS(request);
+        }
+        
+        public void EliminarAlbumWS(AppWindows.ServiceReference.AlbumVO albumVO) {
+            AppWindows.ServiceReference.EliminarAlbumWSRequest inValue = new AppWindows.ServiceReference.EliminarAlbumWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.EliminarAlbumWSRequestBody();
+            inValue.Body.albumVO = albumVO;
+            AppWindows.ServiceReference.EliminarAlbumWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).EliminarAlbumWS(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.EliminarAlbumWSResponse> AppWindows.ServiceReference.ServicioWebSoap.EliminarAlbumWSAsync(AppWindows.ServiceReference.EliminarAlbumWSRequest request) {
+            return base.Channel.EliminarAlbumWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.EliminarAlbumWSResponse> EliminarAlbumWSAsync(AppWindows.ServiceReference.AlbumVO albumVO) {
+            AppWindows.ServiceReference.EliminarAlbumWSRequest inValue = new AppWindows.ServiceReference.EliminarAlbumWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.EliminarAlbumWSRequestBody();
+            inValue.Body.albumVO = albumVO;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).EliminarAlbumWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.ModificarAlbumWSResponse AppWindows.ServiceReference.ServicioWebSoap.ModificarAlbumWS(AppWindows.ServiceReference.ModificarAlbumWSRequest request) {
+            return base.Channel.ModificarAlbumWS(request);
+        }
+        
+        public void ModificarAlbumWS(AppWindows.ServiceReference.AlbumVO albumVO) {
+            AppWindows.ServiceReference.ModificarAlbumWSRequest inValue = new AppWindows.ServiceReference.ModificarAlbumWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ModificarAlbumWSRequestBody();
+            inValue.Body.albumVO = albumVO;
+            AppWindows.ServiceReference.ModificarAlbumWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ModificarAlbumWS(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ModificarAlbumWSResponse> AppWindows.ServiceReference.ServicioWebSoap.ModificarAlbumWSAsync(AppWindows.ServiceReference.ModificarAlbumWSRequest request) {
+            return base.Channel.ModificarAlbumWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.ModificarAlbumWSResponse> ModificarAlbumWSAsync(AppWindows.ServiceReference.AlbumVO albumVO) {
+            AppWindows.ServiceReference.ModificarAlbumWSRequest inValue = new AppWindows.ServiceReference.ModificarAlbumWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ModificarAlbumWSRequestBody();
+            inValue.Body.albumVO = albumVO;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ModificarAlbumWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.InsertarAlbumWSResponse AppWindows.ServiceReference.ServicioWebSoap.InsertarAlbumWS(AppWindows.ServiceReference.InsertarAlbumWSRequest request) {
+            return base.Channel.InsertarAlbumWS(request);
+        }
+        
+        public void InsertarAlbumWS(AppWindows.ServiceReference.AlbumVO albumVO) {
+            AppWindows.ServiceReference.InsertarAlbumWSRequest inValue = new AppWindows.ServiceReference.InsertarAlbumWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.InsertarAlbumWSRequestBody();
+            inValue.Body.albumVO = albumVO;
+            AppWindows.ServiceReference.InsertarAlbumWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).InsertarAlbumWS(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.InsertarAlbumWSResponse> AppWindows.ServiceReference.ServicioWebSoap.InsertarAlbumWSAsync(AppWindows.ServiceReference.InsertarAlbumWSRequest request) {
+            return base.Channel.InsertarAlbumWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.InsertarAlbumWSResponse> InsertarAlbumWSAsync(AppWindows.ServiceReference.AlbumVO albumVO) {
+            AppWindows.ServiceReference.InsertarAlbumWSRequest inValue = new AppWindows.ServiceReference.InsertarAlbumWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.InsertarAlbumWSRequestBody();
+            inValue.Body.albumVO = albumVO;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).InsertarAlbumWSAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWindows.ServiceReference.ObtenerAlbumWSResponse AppWindows.ServiceReference.ServicioWebSoap.ObtenerAlbumWS(AppWindows.ServiceReference.ObtenerAlbumWSRequest request) {
+            return base.Channel.ObtenerAlbumWS(request);
+        }
+        
+        public AppWindows.ServiceReference.AlbumVO ObtenerAlbumWS(int id) {
+            AppWindows.ServiceReference.ObtenerAlbumWSRequest inValue = new AppWindows.ServiceReference.ObtenerAlbumWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ObtenerAlbumWSRequestBody();
+            inValue.Body.id = id;
+            AppWindows.ServiceReference.ObtenerAlbumWSResponse retVal = ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ObtenerAlbumWS(inValue);
+            return retVal.Body.ObtenerAlbumWSResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerAlbumWSResponse> AppWindows.ServiceReference.ServicioWebSoap.ObtenerAlbumWSAsync(AppWindows.ServiceReference.ObtenerAlbumWSRequest request) {
+            return base.Channel.ObtenerAlbumWSAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWindows.ServiceReference.ObtenerAlbumWSResponse> ObtenerAlbumWSAsync(int id) {
+            AppWindows.ServiceReference.ObtenerAlbumWSRequest inValue = new AppWindows.ServiceReference.ObtenerAlbumWSRequest();
+            inValue.Body = new AppWindows.ServiceReference.ObtenerAlbumWSRequestBody();
+            inValue.Body.id = id;
+            return ((AppWindows.ServiceReference.ServicioWebSoap)(this)).ObtenerAlbumWSAsync(inValue);
         }
     }
 }
