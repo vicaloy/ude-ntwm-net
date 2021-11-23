@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace AppWindows.FormularioAlbum
 {
     partial class FormAlbum
@@ -265,6 +267,16 @@ namespace AppWindows.FormularioAlbum
 
         }
 
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Button btnBuscarBanda;
@@ -288,5 +300,8 @@ namespace AppWindows.FormularioAlbum
         private System.Windows.Forms.Label lblCancion;
         private System.Windows.Forms.TextBox txtCancionId;
         private System.Windows.Forms.Label label7;
+
+        public EventHandler btnEliminar_Click { get; private set; }
+        public EventHandler btnModifcar_Click { get; private set; }
     }
 }

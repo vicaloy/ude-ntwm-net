@@ -20,44 +20,69 @@ namespace AppWindows.FormularioCancion
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            lblError.Text = controlador.InsertarCancionForm(txtId.Text, txtNombre.Text, txtDuracion.Text, txtAnio.Text, txtGenero.Text);
-
-        }
+           try{
+                lblError.Text = controlador.InsertarCancionForm(txtId.Text, txtNombre.Text, txtDuracion.Text, txtAnio.Text, txtGenero.Text);
+              }
+           catch
+            {
+                MessageBox.Show("Hubo error al intentar agregar elemento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         private void btnModifcar_Click(object sender, EventArgs e)
         {
-            lblError.Text = controlador.ModificarCancionForm(txtId.Text, txtNombre.Text, txtDuracion.Text, txtAnio.Text, txtGenero.Text);
-
+             try {
+                    lblError.Text = controlador.ModificarCancionForm(txtId.Text, txtNombre.Text, txtDuracion.Text, txtAnio.Text, txtGenero.Text);
+                 }
+            catch 
+                {
+                    MessageBox.Show("Hubo error al intentar agregar elemento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            lblError.Text = controlador.EliminarCancionForm(txtId.Text, txtNombre.Text, txtDuracion.Text, txtAnio.Text, txtGenero.Text);
-
+                try
+                {
+                    lblError.Text = controlador.EliminarCancionForm(txtId.Text, txtNombre.Text, txtDuracion.Text, txtAnio.Text, txtGenero.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Hubo error al intentar agregar elemento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            ServiceReference.BandaVO banda = controlador.ObtenerBandaForm(txtBandaId.Text);
-            if (banda != null)
             {
-                lblBanda.Text = $"{banda.Nombre} {banda.GeneroMusical}";
-                controlador.AgregarBanda(banda);
-            }
-            else
+                try
+                {
+                    ServiceReference.BandaVO banda = controlador.ObtenerBandaForm(txtBandaId.Text);
+                    if (banda != null)
+                    {
+                        lblBanda.Text = $"{banda.Nombre} {banda.GeneroMusical}";
+                        controlador.AgregarBanda(banda);
+                    }
+                    else
+                    {
+                        lblBanda.Text = "No existe banda";
+                    }
+                }
+                }
+            catch
             {
-                lblBanda.Text = "No existe banda";
+                MessageBox.Show("Hubo error al intentar agregar elemento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            ServiceReference.CancionVO cancion = controlador.ObtenerCancionForm(txtId.Text);
-            txtAnio.Text = cancion.Anio.ToString();
-            txtDuracion.Text = cancion.Duracion.ToString();
-            txtGenero.Text = cancion.GeneroMusical;
-            txtId.Text = cancion.Id.ToString();
-            txtNombre.Text = cancion.Nombre;
+           try{
+                    ServiceReference.CancionVO cancion = controlador.ObtenerCancionForm(txtId.Text);
+                    txtAnio.Text = cancion.Anio.ToString();
+                    txtDuracion.Text = cancion.Duracion.ToString();
+                    txtGenero.Text = cancion.GeneroMusical;
+                    txtId.Text = cancion.Id.ToString();
+                    txtNombre.Text = cancion.Nombre;
+              }
+           catch
+            {
+                MessageBox.Show("Hubo error al intentar agregar elemento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-    }
-}
