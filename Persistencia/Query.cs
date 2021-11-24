@@ -26,6 +26,8 @@ namespace Persistencia
 
         public string AgregarBandaCancion() { return "INSERT INTO dbo.compuso (id_banda, id_cancion) VALUES (@id_banda, @id_cancion)"; }
 
+        public string AgregarUsuario() { return "INSERT INTO dbo.usuario (id, usuario, password) VALUES (@id, @usuario, @password)"; }
+
         public string ModificarIntegrante() { return "UPDATE dbo.integrante SET nombre = @nombre, apellido = @apellido, nacimiento = @nacimiento, foto = @foto WHERE id = @id"; }
 
         public string ModificarCancion() { return "UPDATE dbo.cancion SET nombre = @nombre, duracion = @duracion, genero = @genero, anio = @anio WHERE id = @id"; }
@@ -33,6 +35,8 @@ namespace Persistencia
         public string ModificarBanda() { return "UPDATE dbo.banda SET anio_separacion = @anio_separacion, anio_creacion = @anio_creacion, nombre = @nombre, genero = @genero WHERE id = @id"; }
 
         public string ModificarAlbum() { return "UPDATE dbo.album SET anio_creacion = @anio_creacion, nombre = @nombre, genero = @genero, id_banda = @banda WHERE id = @id"; }
+
+        public string ModificarUsuario() { return "UPDATE dbo.usuario SET usuario = @usuario, password = @password WHERE id = @id"; }
 
         public string EliminarIntegrante() { return "DELETE FROM dbo.integrante WHERE id = @id"; }
 
@@ -48,6 +52,8 @@ namespace Persistencia
 
         public string EliminarCancionAlbum() { return "DELETE FROM dbo.pertenece WHERE id_cancion = @id_cancion, id_album = @id_album"; }
 
+        public string EliminarUsuario() { return "DELETE FROM dbo.usuario WHERE id = @id"; }
+
         public string ListarIntegrantes() { return "SELECT * FROM dbo.integrante"; }
 
         public string ListarCanciones() { return "SELECT * FROM dbo.cancion"; }
@@ -56,6 +62,8 @@ namespace Persistencia
 
         public string ListarAlbumes() { return "SELECT * FROM dbo.album"; }
 
+        public string ListarUsuarios() { return "SELECT * FROM dbo.usuario"; }
+
         public string BuscarIntegrante() { return "SELECT * FROM dbo.integrante WHERE id = @id"; }
 
         public string BuscarCancion() { return "SELECT * FROM dbo.cancion WHERE id = @id"; }
@@ -63,6 +71,8 @@ namespace Persistencia
         public string BuscarBanda() { return "SELECT * FROM dbo.banda WHERE id = @id"; }
 
         public string BuscarAlbum() { return "SELECT * FROM dbo.album WHERE id = @id"; }
+
+        public string BuscarUsuario() { return "SELECT * FROM dbo.usuario WHERE id = @id"; }
 
     }
 }

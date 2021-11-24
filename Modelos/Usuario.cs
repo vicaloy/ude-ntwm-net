@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Modelos
+{
+    class Usuario
+    {
+
+        public int Id { get; set; }
+        public string User { get; set; }
+        public string Password { get; set; }
+
+
+        public  Usuario() { }
+
+        public  Usuario(int nId, string nUsuario, string nPassword)
+        {
+
+            Id = nId;
+            User = nUsuario;
+            Password = nPassword;
+
+        }
+
+    }
+}
