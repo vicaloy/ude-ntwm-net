@@ -12,17 +12,3 @@ C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.FormularioBand
 C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.FormularioCancion.FormCancion.resources
 C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.FormMenues.resources
 C:\Users\victo\source\repos\Oblig\AppWindows\obj\Debug\AppWindows.FormularioAlbum.FormAlbum.resources
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\bin\Debug\AppWindows.exe.config
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\bin\Debug\AppWindows.exe
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\bin\Debug\AppWindows.pdb
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\obj\Debug\AppWindows.csproj.AssemblyReference.cache
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\obj\Debug\AppWindows.FormMenues.resources
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\obj\Debug\AppWindows.FormularioAlbum.FormAlbum.resources
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\obj\Debug\AppWindows.FormularioBanda.FormBanda.resources
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\obj\Debug\AppWindows.FormularioCancion.FormCancion.resources
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\obj\Debug\AppWindows.FormularioIntegrante.FormIntegrante.resources
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\obj\Debug\AppWindows.Properties.Resources.resources
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\obj\Debug\AppWindows.csproj.GenerateResource.cache
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\obj\Debug\AppWindows.csproj.CoreCompileInputs.cache
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\obj\Debug\AppWindows.exe
-C:\Users\feder\Desktop\ude-ntwm-oblig\AppWindows\obj\Debug\AppWindows.pdb

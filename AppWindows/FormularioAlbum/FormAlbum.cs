@@ -21,90 +21,48 @@ namespace AppWindows.FormularioAlbum
 
         private void btnBuscarBanda_Click(object sender, EventArgs e)
         {
-            try
-            {
-                BandaVO banda = controlador.ObtenerBandaForm(txtBandaId.Text);
-                lblBanda.Text = banda.Nombre;
-            }
-            catch 
-            {
-                MessageBox.Show("Error de busqueda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            BandaVO banda = controlador.ObtenerBandaForm(txtBandaId.Text);
+            lblBanda.Text = banda.Nombre;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            CancionVO cancion = controlador.ObtenerCancionForm(txtCancionId.Text);
+            if (cancion != null)
             {
-                CancionVO cancion = controlador.ObtenerCancionForm(txtCancionId.Text);
-                if (cancion != null)
-                {
-                    lblCancion.Text = $"{cancion.Nombre} {cancion.GeneroMusical}";
-                    controlador.AgregarCancion(cancion);
-                }
-                else
-                {
-                    lblCancion.Text = "No existe cancion";
-                }
+                lblCancion.Text = $"{cancion.Nombre} {cancion.GeneroMusical}";
+                controlador.AgregarCancion(cancion);
             }
-            catch
+            else
             {
-                MessageBox.Show("Hubo error al intentar agregar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblCancion.Text = "No existe cancion";
+            }
+        }
 
-            }
         private void btnBuscar_Click(object sender, EventArgs e)
-            {
-                try
-                {
-                    AlbumVO album = controlador.ObtenerAlbumForm(txtId.Text);
-                    txtNombre.Text = album.Nombre;
-                    txtCreacion.Text = album.Anio.ToString();
-                    txtGenero.Text = album.GeneroMusical;
-                    txtId.Text = album.Id.ToString();
-                    txtBandaId.Text = album.Band.Id.ToString();
-                }
-                catch
-                {
-                    MessageBox.Show("Hubo error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-            }
-
-                private void btnIngresar_Click(object sender, EventArgs e)
         {
-                try
-                {
-                    lblError.Text = controlador.InsertarAlbumForm(txtId.Text, txtNombre.Text, txtCreacion.Text, txtGenero.Text);
-                }
-                catch
-                {
-                    MessageBox.Show("Hubo error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            AlbumVO album = controlador.ObtenerAlbumForm(txtId.Text);
+            txtNombre.Text = album.Nombre;
+            txtCreacion.Text = album.Anio.ToString();
+            txtGenero.Text = album.GeneroMusical;
+            txtId.Text = album.Id.ToString();
+            txtBandaId.Text = album.Band.Id.ToString();
+        }
 
-                }
-            }
-            private void btnModifcar_Click(object sender, EventArgs e)
-            {
-                try
-                {
-                    lblError.Text = controlador.ModificarAlbumForm(txtId.Text, txtNombre.Text, txtCreacion.Text, txtGenero.Text);
-                }
-                catch
-                {
-                    MessageBox.Show("Hubo error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            lblError.Text = controlador.InsertarAlbumForm(txtId.Text, txtNombre.Text, txtCreacion.Text, txtGenero.Text);
+        }
 
-                }
-            }
+        private void btnModifcar_Click(object sender, EventArgs e)
+        {
+            lblError.Text = controlador.ModificarAlbumForm(txtId.Text, txtNombre.Text, txtCreacion.Text, txtGenero.Text);
+        }
 
-            private void btnEliminar_Click(object sender, EventArgs e)
-            {
-                try
-                {
-                    lblError.Text = controlador.EliminarAlbumForm(txtId.Text, txtNombre.Text, txtCreacion.Text, txtGenero.Text);
-                }
-                catch
-                {
-                    MessageBox.Show("Hubo error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-             }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            lblError.Text = controlador.EliminarAlbumForm(txtId.Text, txtNombre.Text, txtCreacion.Text, txtGenero.Text);
+
+        }
     }
 }

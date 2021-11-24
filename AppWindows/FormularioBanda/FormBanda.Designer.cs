@@ -1,6 +1,4 @@
 ﻿
-using System;
-
 namespace AppWindows.FormularioBanda
 {
     partial class FormBanda
@@ -266,7 +264,5 @@ namespace AppWindows.FormularioBanda
         private System.Windows.Forms.TextBox txtIntegranteId;
         private System.Windows.Forms.Label lblIntegrante;
         private System.Windows.Forms.Button btnAgregar;
-
-        public EventHandler btnBuscar_Click { get; private set; }
     }
 }

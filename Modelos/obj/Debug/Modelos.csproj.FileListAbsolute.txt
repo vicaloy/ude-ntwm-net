@@ -4,9 +4,3 @@ C:\Users\victo\source\repos\Oblig\Modelos\obj\Debug\Modelos.csproj.CoreCompileIn
 C:\Users\victo\source\repos\Oblig\Modelos\obj\Debug\Modelos.dll
 C:\Users\victo\source\repos\Oblig\Modelos\obj\Debug\Modelos.pdb
 C:\Users\victo\source\repos\Oblig\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
-C:\Users\feder\Desktop\ude-ntwm-oblig\Modelos\bin\Debug\Modelos.dll
-C:\Users\feder\Desktop\ude-ntwm-oblig\Modelos\bin\Debug\Modelos.pdb
-C:\Users\feder\Desktop\ude-ntwm-oblig\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
-C:\Users\feder\Desktop\ude-ntwm-oblig\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
-C:\Users\feder\Desktop\ude-ntwm-oblig\Modelos\obj\Debug\Modelos.dll
-C:\Users\feder\Desktop\ude-ntwm-oblig\Modelos\obj\Debug\Modelos.pdb
