@@ -34,7 +34,11 @@ namespace AppWindows.FormularioIntegrante
             integranteVO.Apellido = apellido;
             integranteVO.FechaNacimiento = fecha;
             integranteVO.Foto = archivo;
+
+            // Agregar en API si el procediminto fue ejecutado correctamente o NO ?
             ws.InsertarIntegranteWS(integranteVO);
+
+
             return "Exito";
         }
 
