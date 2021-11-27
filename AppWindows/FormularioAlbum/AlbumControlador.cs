@@ -14,12 +14,16 @@ namespace AppWindows.FormularioAlbum
 
         public String InsertarAlbumForm(String id, string nombre, string anio, string genero)
         {
-            int nro;
+            int nro=0;
             int anioNro;
-            if (!Int32.TryParse(id, out nro))
-            {
-                return "Ingrese un id mayor a 0";
-            }
+           // if(id.Trim()!="")
+           // {
+                if (!Int32.TryParse(id, out nro))
+                {
+                    return "Ingrese un id mayor a 0";
+                }
+           // }
+           
             if (nombre == null || nombre == "")
             {
                 return "Ingrese un nombre";
@@ -44,9 +48,16 @@ namespace AppWindows.FormularioAlbum
             albumVO.Band = bandaVO;
             albumVO.Canciones = canciones.ToArray();
 
-            ws.InsertarAlbumWS(albumVO);
+            try
+            {
+                ws.InsertarAlbumWS(albumVO);
 
-            return "Exito";
+                return "Exito";
+            }catch(Exception ex)
+            {
+                return ex.Message;
+            }
+           
         }
 
         public String ModificarAlbumForm(String id, string nombre, string anio, string genero)
@@ -80,10 +91,15 @@ namespace AppWindows.FormularioAlbum
             albumVO.Anio = anioNro;
             albumVO.Band = bandaVO;
             albumVO.Canciones = canciones.ToArray();
+            try
+            {
+                ws.ModificarAlbumWS(albumVO);
 
-            ws.ModificarAlbumWS(albumVO);
-
-            return "Exito";
+                return "Exito";
+            }catch(Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
         public String EliminarAlbumForm(String id, string nombre, string anio, string genero)
@@ -117,10 +133,16 @@ namespace AppWindows.FormularioAlbum
             albumVO.Anio = anioNro;
             albumVO.Band = bandaVO;
             albumVO.Canciones = canciones.ToArray();
+            try
+            {
+                ws.EliminarAlbumWS(albumVO);
 
-            ws.EliminarAlbumWS(albumVO);
-
-            return "Exito";
+                return "Exito";
+            }catch(Exception ex)
+            {
+                return ex.Message;
+            }
+           
         }
 
         public BandaVO ObtenerBandaForm(String id)
@@ -128,12 +150,17 @@ namespace AppWindows.FormularioAlbum
             int nro;
             if (!Int32.TryParse(id, out nro))
             {
-                return null;
+                throw new Exception("Error tiene que ser numerico");
             }
-
-            ServicioWebSoapClient ws = new ServicioWebSoapClient();
-            bandaVO= ws.ObtenerBandaWS(nro);
-            return bandaVO;
+            try
+            {
+                ServicioWebSoapClient ws = new ServicioWebSoapClient();
+                bandaVO = ws.ObtenerBandaWS(nro);
+                return bandaVO;
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public void AgregarCancion(CancionVO cancion)
@@ -146,12 +173,17 @@ namespace AppWindows.FormularioAlbum
             int nro;
             if (!Int32.TryParse(id, out nro))
             {
-                return null;
+                throw new Exception("Error tiene que ser numerico");
             }
 
-
-            ServicioWebSoapClient ws = new ServicioWebSoapClient();
-            return ws.ObtenerCancionWS(nro);
+            try
+            {
+                ServicioWebSoapClient ws = new ServicioWebSoapClient();
+                return ws.ObtenerCancionWS(nro);
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
 
         }
 
@@ -160,12 +192,18 @@ namespace AppWindows.FormularioAlbum
             int nro;
             if (!Int32.TryParse(id, out nro))
             {
-                return null;
+                throw new Exception("El codigo debe ser numerico");
             }
 
-
-            ServicioWebSoapClient ws = new ServicioWebSoapClient();
-            return ws.ObtenerAlbumWS(nro);
+            try
+            {
+                ServicioWebSoapClient ws = new ServicioWebSoapClient();
+                return ws.ObtenerAlbumWS(nro);
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            
 
         }
     }

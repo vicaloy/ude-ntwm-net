@@ -22,15 +22,16 @@ namespace AppWindows.FormularioBanda
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            ServiceReference.IntegranteVO integrante = controlador.ObtenerIntegranteForm(txtIntegranteId.Text);
-            if (integrante != null)
+            try
             {
+                lblError.Text = "";
+                ServiceReference.IntegranteVO integrante = controlador.ObtenerIntegranteForm(txtIntegranteId.Text);
                 lblIntegrante.Text = $"{integrante.Nombre} {integrante.Apellido}";
                 controlador.AgregarIntegrante(integrante);
-            }
-            else
+                
+            }catch(Exception ex)
             {
-                lblIntegrante.Text = "No existe integrante";
+                lblError.Text = ex.Message;
             }
         }
 
@@ -54,12 +55,20 @@ namespace AppWindows.FormularioBanda
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BandaVO banda = controlador.ObtenerBandaForm(txtId.Text);
-            txtId.Text = banda.Id.ToString();
-            txtNombre.Text = banda.Nombre;
-            txtGenero.Text = banda.GeneroMusical;
-            txtCreacion.Text = banda.AnioCreacion.ToString();
-            txtSeparacion.Text = banda.AnioSeparacion.ToString();
+            try
+            {
+                lblError.Text = "";
+                BandaVO banda = controlador.ObtenerBandaForm(txtId.Text);
+                txtId.Text = banda.Id.ToString();
+                txtNombre.Text = banda.Nombre;
+                txtGenero.Text = banda.GeneroMusical;
+                txtCreacion.Text = banda.AnioCreacion.ToString();
+                txtSeparacion.Text = banda.AnioSeparacion.ToString();
+            }catch(Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
+            
         }
     }
 }

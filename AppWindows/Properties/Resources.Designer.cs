@@ -59,5 +59,15 @@ namespace AppWindows.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap caracter_banda_musica_ilustracion_dibujos_animados_plana_338371_15 {
+            get {
+                object obj = ResourceManager.GetObject("caracter-banda-musica-ilustracion-dibujos-animados-plana_338371-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

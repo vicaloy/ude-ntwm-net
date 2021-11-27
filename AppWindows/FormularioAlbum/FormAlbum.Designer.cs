@@ -29,7 +29,6 @@ namespace AppWindows.FormularioAlbum
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBuscarBanda = new System.Windows.Forms.Button();
             this.lblBanda = new System.Windows.Forms.Label();
             this.txtBandaId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,16 +50,6 @@ namespace AppWindows.FormularioAlbum
             this.txtCancionId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnBuscarBanda
-            // 
-            this.btnBuscarBanda.Location = new System.Drawing.Point(436, 155);
-            this.btnBuscarBanda.Name = "btnBuscarBanda";
-            this.btnBuscarBanda.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarBanda.TabIndex = 45;
-            this.btnBuscarBanda.Text = "BUSCAR";
-            this.btnBuscarBanda.UseVisualStyleBackColor = true;
-            this.btnBuscarBanda.Click += new System.EventHandler(this.btnBuscarBanda_Click);
             // 
             // lblBanda
             // 
@@ -241,7 +230,6 @@ namespace AppWindows.FormularioAlbum
             this.Controls.Add(this.lblCancion);
             this.Controls.Add(this.txtCancionId);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnBuscarBanda);
             this.Controls.Add(this.lblBanda);
             this.Controls.Add(this.txtBandaId);
             this.Controls.Add(this.label6);
@@ -266,8 +254,6 @@ namespace AppWindows.FormularioAlbum
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnBuscarBanda;
         private System.Windows.Forms.Label lblBanda;
         private System.Windows.Forms.TextBox txtBandaId;
         private System.Windows.Forms.Label label6;
