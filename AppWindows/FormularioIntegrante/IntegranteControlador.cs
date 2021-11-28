@@ -13,6 +13,10 @@ namespace AppWindows.FormularioIntegrante
             if (!Int32.TryParse(id, out nro)) {
                 return "Ingrese un id mayor a 0";
             }
+            if (nro < 0)
+            {
+                return "El codigo tiene que ser positivo";
+            }
             if (nombre == null || nombre == "") {
                 return "Ingrese un nombre";
             }
@@ -34,12 +38,17 @@ namespace AppWindows.FormularioIntegrante
             integranteVO.Apellido = apellido;
             integranteVO.FechaNacimiento = fecha;
             integranteVO.Foto = archivo;
-
+            try
+            {
+                 ws.InsertarIntegranteWS(integranteVO);
+                 return "Exito";
+            }
+            catch(Exception ex)
+            {
+                return ex.Message;
+            }
             // Agregar en API si el procediminto fue ejecutado correctamente o NO ?
-            ws.InsertarIntegranteWS(integranteVO);
-
-
-            return "Exito";
+           
         }
 
         public String ModificarIntegranteForm(String id, string nombre, string apellido, DateTime fecha, byte[] archivo)
@@ -48,6 +57,10 @@ namespace AppWindows.FormularioIntegrante
             if (!Int32.TryParse(id, out nro))
             {
                 return "Ingrese un id mayor a 0";
+            }
+            if (nro < 0)
+            {
+                return "El codigo tiene que ser positivo";
             }
             if (nombre == null || nombre == "")
             {
@@ -73,9 +86,14 @@ namespace AppWindows.FormularioIntegrante
             integranteVO.Apellido = apellido;
             integranteVO.FechaNacimiento = fecha;
             integranteVO.Foto = archivo;
-            ws.ModificarIntegranteWS(integranteVO);
-            return "Exito";
-        }
+            try { 
+                ws.ModificarIntegranteWS(integranteVO);
+                return "Exito";
+            }catch(Exception ex)
+            {
+                return ex.Message;
+            }
+}
 
         public String EliminarIntegranteForm(String id, string nombre, string apellido, DateTime fecha, byte[] archivo)
         {
@@ -83,6 +101,10 @@ namespace AppWindows.FormularioIntegrante
             if (!Int32.TryParse(id, out nro))
             {
                 return "Ingrese un id mayor a 0";
+            }
+            if (nro < 0)
+            {
+                return "El codigo tiene que ser positivo";
             }
             if (nombre == null || nombre == "")
             {
@@ -101,8 +123,14 @@ namespace AppWindows.FormularioIntegrante
             integranteVO.Apellido = apellido;
             integranteVO.FechaNacimiento = fecha;
             integranteVO.Foto = archivo;
-            ws.EliminarIntegranteWS(integranteVO);
-            return "Exito";
+            try { 
+                ws.EliminarIntegranteWS(integranteVO);
+                return "Exito";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
         public ServiceReference.IntegranteVO ObtenerIntegranteForm(String id)
@@ -110,13 +138,22 @@ namespace AppWindows.FormularioIntegrante
             int nro;
             if (!Int32.TryParse(id, out nro))
             {
-                return null;
+                throw new Exception("Tiene que ser numerico");
+            }
+            if(nro<0)
+            {
+                throw new Exception("El codigo tiene que ser positivo");
             }
 
+            try { 
+                ServiceReference.ServicioWebSoapClient ws = new ServiceReference.ServicioWebSoapClient();
+                return ws.ObtenerIntegranteWS(nro);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
 
-            ServiceReference.ServicioWebSoapClient ws = new ServiceReference.ServicioWebSoapClient();
-            return ws.ObtenerIntegranteWS(nro);
-            
         }
     }
 }

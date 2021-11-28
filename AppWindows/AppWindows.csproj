@@ -213,5 +213,26 @@
   <ItemGroup>
     <None Include="Resources\caracter-banda-musica-ilustracion-dibujos-animados-plana_338371-15.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2c8cd9dd-7c6a-4903-bc7b-1ea9d83c988b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d0b2cb20-a3ee-4fc2-92a4-2a792bbeaea4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d892c47b-392c-4b52-bd59-a9ed9c96c7fd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a10dee19-5d78-4d9f-afb8-42d72fc015dd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d0b2cb20-a3ee-4fc2-92a4-2a792bbeaea41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a10dee19-5d78-4d9f-afb8-42d72fc015dd1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d892c47b-392c-4b52-bd59-a9ed9c96c7fd1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

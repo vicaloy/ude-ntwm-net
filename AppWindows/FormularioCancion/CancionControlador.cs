@@ -36,6 +36,13 @@ namespace AppWindows.FormularioCancion
             {
                 return "Ingrese una duracion";
             }
+            else
+            {
+                if(duracionNro <=0)
+                {
+                    return "La duracion tiene que ser mayor a cero";
+                }
+            }
 
             CancionVO cancionVO = new CancionVO();
             cancionVO.Id = nro;
@@ -45,11 +52,17 @@ namespace AppWindows.FormularioCancion
             cancionVO.Duracion = duracionNro;
             cancionVO.Bandas = bandas.ToArray();
 
-            ServicioWebSoapClient ws = new ServicioWebSoapClient();
-            ws.InsertarCancionWS(cancionVO);
+            try { 
+                ServicioWebSoapClient ws = new ServicioWebSoapClient();
+                ws.InsertarCancionWS(cancionVO);
 
-            return "Exito";
-        }
+                return "Exito";
+        }catch(Exception ex)
+            {
+                return ex.Message;
+            }
+
+}
 
         public void AgregarBanda(BandaVO banda)
         {
@@ -61,12 +74,15 @@ namespace AppWindows.FormularioCancion
             int nro;
             if (!Int32.TryParse(id, out nro))
             {
-                return null;
+                throw new Exception("El codigo tiene que ser numerico ");
             }
 
-
-            ServiceReference.ServicioWebSoapClient ws = new ServiceReference.ServicioWebSoapClient();
-            return ws.ObtenerBandaWS(nro);
+           
+                ServiceReference.ServicioWebSoapClient ws = new ServiceReference.ServicioWebSoapClient();
+                return ws.ObtenerBandaWS(nro);
+           
+            
+           
 
         }
 
@@ -105,11 +121,17 @@ namespace AppWindows.FormularioCancion
             cancionVO.Duracion = duracionNro;
             cancionVO.Bandas = bandas.ToArray();
 
-            ServicioWebSoapClient ws = new ServicioWebSoapClient();
-            ws.ModificarCancionWS(cancionVO);
+            try { 
+                ServicioWebSoapClient ws = new ServicioWebSoapClient();
+                ws.ModificarCancionWS(cancionVO);
 
-            return "Exito";
-        }
+                return "Exito";
+        }catch(Exception ex)
+            {
+                return ex.Message;
+            }
+
+}
 
         public String EliminarCancionForm(String id, string nombre, string duracion, string anio, string genero)
         {
@@ -137,6 +159,13 @@ namespace AppWindows.FormularioCancion
             {
                 return "Ingrese una duracion";
             }
+            else
+            {
+                if(duracionNro<=0)
+                {
+                    return "La durecion tiene que ser mayor a 0";
+                }
+            }
 
             CancionVO cancionVO = new CancionVO();
             cancionVO.Id = nro;
@@ -145,11 +174,18 @@ namespace AppWindows.FormularioCancion
             cancionVO.Anio = anioNro;
             cancionVO.Duracion = duracionNro;
             cancionVO.Bandas = bandas.ToArray();
+            try { 
+                ServicioWebSoapClient ws = new ServicioWebSoapClient();
+                ws.EliminarCancionWS(cancionVO);
 
-            ServicioWebSoapClient ws = new ServicioWebSoapClient();
-            ws.EliminarCancionWS(cancionVO);
+                return "Exito";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
 
-            return "Exito";
+
         }
 
         public CancionVO ObtenerCancionForm(String id)
@@ -157,7 +193,7 @@ namespace AppWindows.FormularioCancion
             int nro;
             if (!Int32.TryParse(id, out nro))
             {
-                return null;
+                throw new Exception("Solamente numerico");
             }
 
 

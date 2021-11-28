@@ -79,5 +79,10 @@ namespace AppWindows.FormularioAlbum
             lblError.Text = controlador.EliminarAlbumForm(txtId.Text, txtNombre.Text, txtCreacion.Text, txtGenero.Text);
 
         }
+
+        private void FormAlbum_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

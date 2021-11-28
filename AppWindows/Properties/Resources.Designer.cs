@@ -63,9 +63,79 @@ namespace AppWindows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2c8cd9dd_7c6a_4903_bc7b_1ea9d83c988b {
+            get {
+                object obj = ResourceManager.GetObject("2c8cd9dd-7c6a-4903-bc7b-1ea9d83c988b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap a10dee19_5d78_4d9f_afb8_42d72fc015dd {
+            get {
+                object obj = ResourceManager.GetObject("a10dee19-5d78-4d9f-afb8-42d72fc015dd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap a10dee19_5d78_4d9f_afb8_42d72fc015dd1 {
+            get {
+                object obj = ResourceManager.GetObject("a10dee19-5d78-4d9f-afb8-42d72fc015dd1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caracter_banda_musica_ilustracion_dibujos_animados_plana_338371_15 {
             get {
                 object obj = ResourceManager.GetObject("caracter-banda-musica-ilustracion-dibujos-animados-plana_338371-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d0b2cb20_a3ee_4fc2_92a4_2a792bbeaea4 {
+            get {
+                object obj = ResourceManager.GetObject("d0b2cb20-a3ee-4fc2-92a4-2a792bbeaea4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d0b2cb20_a3ee_4fc2_92a4_2a792bbeaea41 {
+            get {
+                object obj = ResourceManager.GetObject("d0b2cb20-a3ee-4fc2-92a4-2a792bbeaea41", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d892c47b_392c_4b52_bd59_a9ed9c96c7fd {
+            get {
+                object obj = ResourceManager.GetObject("d892c47b-392c-4b52-bd59-a9ed9c96c7fd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d892c47b_392c_4b52_bd59_a9ed9c96c7fd1 {
+            get {
+                object obj = ResourceManager.GetObject("d892c47b-392c-4b52-bd59-a9ed9c96c7fd1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

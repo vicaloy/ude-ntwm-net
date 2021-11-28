@@ -52,7 +52,7 @@ namespace AppWindows.FormularioCancion
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(516, 52);
+            this.btnBuscar.Location = new System.Drawing.Point(550, 115);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 34;
@@ -70,7 +70,7 @@ namespace AppWindows.FormularioCancion
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(378, 257);
+            this.btnEliminar.Location = new System.Drawing.Point(412, 320);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(77, 20);
             this.btnEliminar.TabIndex = 32;
@@ -80,7 +80,7 @@ namespace AppWindows.FormularioCancion
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(245, 49);
+            this.txtId.Location = new System.Drawing.Point(279, 112);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(250, 20);
             this.txtId.TabIndex = 30;
@@ -88,7 +88,8 @@ namespace AppWindows.FormularioCancion
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(186, 52);
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(220, 115);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 13);
             this.label5.TabIndex = 29;
@@ -97,7 +98,8 @@ namespace AppWindows.FormularioCancion
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(186, 180);
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(220, 243);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 27;
@@ -106,7 +108,8 @@ namespace AppWindows.FormularioCancion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(188, 146);
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(222, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 26;
@@ -115,7 +118,8 @@ namespace AppWindows.FormularioCancion
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(186, 117);
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(220, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 25;
@@ -123,21 +127,21 @@ namespace AppWindows.FormularioCancion
             // 
             // txtDuracion
             // 
-            this.txtDuracion.Location = new System.Drawing.Point(245, 113);
+            this.txtDuracion.Location = new System.Drawing.Point(279, 176);
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.Size = new System.Drawing.Size(250, 20);
             this.txtDuracion.TabIndex = 24;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(245, 81);
+            this.txtNombre.Location = new System.Drawing.Point(279, 144);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(250, 20);
             this.txtNombre.TabIndex = 23;
             // 
             // btnModifcar
             // 
-            this.btnModifcar.Location = new System.Drawing.Point(283, 257);
+            this.btnModifcar.Location = new System.Drawing.Point(317, 320);
             this.btnModifcar.Name = "btnModifcar";
             this.btnModifcar.Size = new System.Drawing.Size(77, 20);
             this.btnModifcar.TabIndex = 22;
@@ -147,7 +151,7 @@ namespace AppWindows.FormularioCancion
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(189, 257);
+            this.btnIngresar.Location = new System.Drawing.Point(223, 320);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(78, 20);
             this.btnIngresar.TabIndex = 21;
@@ -158,7 +162,8 @@ namespace AppWindows.FormularioCancion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(186, 84);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(220, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 20;
@@ -166,14 +171,14 @@ namespace AppWindows.FormularioCancion
             // 
             // txtAnio
             // 
-            this.txtAnio.Location = new System.Drawing.Point(245, 143);
+            this.txtAnio.Location = new System.Drawing.Point(279, 206);
             this.txtAnio.Name = "txtAnio";
             this.txtAnio.Size = new System.Drawing.Size(250, 20);
             this.txtAnio.TabIndex = 35;
             // 
             // txtGenero
             // 
-            this.txtGenero.Location = new System.Drawing.Point(245, 180);
+            this.txtGenero.Location = new System.Drawing.Point(279, 243);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(250, 20);
             this.txtGenero.TabIndex = 36;
@@ -181,7 +186,8 @@ namespace AppWindows.FormularioCancion
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(186, 215);
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(220, 278);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(38, 13);
@@ -190,14 +196,14 @@ namespace AppWindows.FormularioCancion
             // 
             // txtBandaId
             // 
-            this.txtBandaId.Location = new System.Drawing.Point(245, 212);
+            this.txtBandaId.Location = new System.Drawing.Point(279, 275);
             this.txtBandaId.Name = "txtBandaId";
             this.txtBandaId.Size = new System.Drawing.Size(250, 20);
             this.txtBandaId.TabIndex = 38;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(526, 215);
+            this.btnAgregar.Location = new System.Drawing.Point(560, 278);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 39;
@@ -208,7 +214,7 @@ namespace AppWindows.FormularioCancion
             // lblBanda
             // 
             this.lblBanda.AutoSize = true;
-            this.lblBanda.Location = new System.Drawing.Point(543, 241);
+            this.lblBanda.Location = new System.Drawing.Point(577, 304);
             this.lblBanda.Name = "lblBanda";
             this.lblBanda.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblBanda.Size = new System.Drawing.Size(38, 13);
@@ -219,6 +225,8 @@ namespace AppWindows.FormularioCancion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::AppWindows.Properties.Resources.d0b2cb20_a3ee_4fc2_92a4_2a792bbeaea4;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblBanda);
             this.Controls.Add(this.btnAgregar);
@@ -241,6 +249,7 @@ namespace AppWindows.FormularioCancion
             this.Controls.Add(this.label1);
             this.Name = "FormCancion";
             this.Text = "FormCancion";
+            this.Load += new System.EventHandler(this.FormCancion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

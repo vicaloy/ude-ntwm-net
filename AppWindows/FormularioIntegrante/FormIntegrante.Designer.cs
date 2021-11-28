@@ -49,7 +49,8 @@ namespace AppWindows.FormularioIntegrante
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(187, 54);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(180, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 0;
@@ -57,7 +58,7 @@ namespace AppWindows.FormularioIntegrante
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(190, 227);
+            this.btnIngresar.Location = new System.Drawing.Point(223, 295);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(78, 20);
             this.btnIngresar.TabIndex = 1;
@@ -67,7 +68,7 @@ namespace AppWindows.FormularioIntegrante
             // 
             // btnModifcar
             // 
-            this.btnModifcar.Location = new System.Drawing.Point(284, 227);
+            this.btnModifcar.Location = new System.Drawing.Point(317, 295);
             this.btnModifcar.Name = "btnModifcar";
             this.btnModifcar.Size = new System.Drawing.Size(77, 20);
             this.btnModifcar.TabIndex = 2;
@@ -77,14 +78,14 @@ namespace AppWindows.FormularioIntegrante
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(246, 51);
+            this.txtNombre.Location = new System.Drawing.Point(239, 131);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(250, 20);
             this.txtNombre.TabIndex = 3;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(246, 83);
+            this.txtApellido.Location = new System.Drawing.Point(239, 163);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(250, 20);
             this.txtApellido.TabIndex = 4;
@@ -92,7 +93,8 @@ namespace AppWindows.FormularioIntegrante
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(187, 87);
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(180, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 8;
@@ -101,7 +103,8 @@ namespace AppWindows.FormularioIntegrante
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(183, 115);
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(176, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 9;
@@ -110,7 +113,8 @@ namespace AppWindows.FormularioIntegrante
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(187, 150);
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(180, 230);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 10;
@@ -118,7 +122,7 @@ namespace AppWindows.FormularioIntegrante
             // 
             // pickerFecha
             // 
-            this.pickerFecha.Location = new System.Drawing.Point(246, 109);
+            this.pickerFecha.Location = new System.Drawing.Point(239, 189);
             this.pickerFecha.Name = "pickerFecha";
             this.pickerFecha.Size = new System.Drawing.Size(245, 20);
             this.pickerFecha.TabIndex = 13;
@@ -126,7 +130,8 @@ namespace AppWindows.FormularioIntegrante
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(187, 22);
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(180, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 13);
             this.label5.TabIndex = 14;
@@ -134,14 +139,14 @@ namespace AppWindows.FormularioIntegrante
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(246, 19);
+            this.txtId.Location = new System.Drawing.Point(239, 99);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(250, 20);
             this.txtId.TabIndex = 15;
             // 
             // btnFoto
             // 
-            this.btnFoto.Location = new System.Drawing.Point(246, 145);
+            this.btnFoto.Location = new System.Drawing.Point(239, 225);
             this.btnFoto.Name = "btnFoto";
             this.btnFoto.Size = new System.Drawing.Size(245, 23);
             this.btnFoto.TabIndex = 16;
@@ -151,7 +156,7 @@ namespace AppWindows.FormularioIntegrante
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(379, 227);
+            this.btnEliminar.Location = new System.Drawing.Point(412, 295);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(77, 20);
             this.btnEliminar.TabIndex = 17;
@@ -162,14 +167,14 @@ namespace AppWindows.FormularioIntegrante
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(246, 190);
+            this.lblError.Location = new System.Drawing.Point(239, 270);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 13);
             this.lblError.TabIndex = 18;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(517, 22);
+            this.btnBuscar.Location = new System.Drawing.Point(510, 102);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 19;
@@ -181,6 +186,8 @@ namespace AppWindows.FormularioIntegrante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::AppWindows.Properties.Resources.d892c47b_392c_4b52_bd59_a9ed9c96c7fd;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(686, 390);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblError);

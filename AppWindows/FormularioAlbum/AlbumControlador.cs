@@ -22,8 +22,11 @@ namespace AppWindows.FormularioAlbum
                 {
                     return "Ingrese un id mayor a 0";
                 }
-           // }
-           
+            // }
+            if (nro < 0)
+            {
+                throw new Exception("El codigo tiene que ser positivo");
+            }
             if (nombre == null || nombre == "")
             {
                 return "Ingrese un nombre";
@@ -66,7 +69,11 @@ namespace AppWindows.FormularioAlbum
             int anioNro;
             if (!Int32.TryParse(id, out nro))
             {
-                return "Ingrese un id mayor a 0";
+                return "Ingrese un id tiene que ser numerico";
+            }
+            if (nro < 0)
+            {
+                throw new Exception("El codigo tiene que ser positivo");
             }
             if (nombre == null || nombre == "")
             {
@@ -91,12 +98,13 @@ namespace AppWindows.FormularioAlbum
             albumVO.Anio = anioNro;
             albumVO.Band = bandaVO;
             albumVO.Canciones = canciones.ToArray();
-            try
-            {
+
+            try { 
                 ws.ModificarAlbumWS(albumVO);
 
                 return "Exito";
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return ex.Message;
             }
@@ -109,6 +117,10 @@ namespace AppWindows.FormularioAlbum
             if (!Int32.TryParse(id, out nro))
             {
                 return "Ingrese un id mayor a 0";
+            }
+            if (nro < 0)
+            {
+                throw new Exception("El codigo tiene que ser positivo");
             }
             if (nombre == null || nombre == "")
             {
@@ -138,11 +150,12 @@ namespace AppWindows.FormularioAlbum
                 ws.EliminarAlbumWS(albumVO);
 
                 return "Exito";
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return ex.Message;
             }
-           
+
         }
 
         public BandaVO ObtenerBandaForm(String id)
@@ -151,6 +164,10 @@ namespace AppWindows.FormularioAlbum
             if (!Int32.TryParse(id, out nro))
             {
                 throw new Exception("Error tiene que ser numerico");
+            }
+            if (nro < 0)
+            {
+                throw new Exception("El codigo tiene que ser positivo");
             }
             try
             {
@@ -175,6 +192,10 @@ namespace AppWindows.FormularioAlbum
             {
                 throw new Exception("Error tiene que ser numerico");
             }
+            if (nro < 0)
+            {
+                throw new Exception("El codigo tiene que ser positivo");
+            }
 
             try
             {
@@ -193,6 +214,10 @@ namespace AppWindows.FormularioAlbum
             if (!Int32.TryParse(id, out nro))
             {
                 throw new Exception("El codigo debe ser numerico");
+            }
+            if (nro < 0)
+            {
+                throw new Exception("El codigo tiene que ser positivo");
             }
 
             try

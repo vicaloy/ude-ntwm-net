@@ -19,6 +19,10 @@ namespace AppWindows.FormularioBanda
             {
                 return "Ingrese un id mayor a 0";
             }
+            if (nro < 0)
+            {
+                return "El codigo tiene que ser positivo";
+            }
             if (nombre == null || nombre == "")
             {
                 return "Ingrese un nombre";
@@ -53,28 +57,31 @@ namespace AppWindows.FormularioBanda
             bandaVO.AnioCreacion = creacion;
             bandaVO.AnioSeparacion = separacion;
             bandaVO.Integrantes = integrantes.ToArray();
-
-            try
-            {
+            try { 
+           
                 ws.InsertarBandaWS(bandaVO);
                 return "Exito";
-            }
+
+        }
             catch(Exception ex)
             {
                 return ex.Message;
             }
 
-            
-        }
+}
 
         public String ModificarBandaForm(String id, string nombre, string genero, string anioCreacion, string anioSeparacion)
         {
             int nro;
             int creacion;
-            int separacion;
+            int separacion=0;
             if (!Int32.TryParse(id, out nro))
             {
                 return "Ingrese un id mayor a 0";
+            }
+            if (nro < 0)
+            {
+                return"El codigo tiene que ser positivo";
             }
             if (nombre == null || nombre == "")
             {
@@ -88,11 +95,19 @@ namespace AppWindows.FormularioBanda
             {
                 return "Ingrese un año creacion";
             }
-            if (!Int32.TryParse(anioSeparacion, out separacion))
+            if (anioSeparacion.Trim() != "")
             {
-                return "Ingrese un año separacion";
-            }
+                if (!Int32.TryParse(anioSeparacion, out separacion))
+                {
+                    return "Ingrese un año separacion";
 
+                }
+                else
+                    if (creacion > separacion)
+                {
+                    return "El año de creacion tiene que ser menor, que le año de separacion ";
+                }
+            }
 
             ServicioWebSoapClient ws = new ServicioWebSoapClient();
             BandaVO bandaVO = new BandaVO();
@@ -103,17 +118,16 @@ namespace AppWindows.FormularioBanda
             bandaVO.AnioSeparacion = separacion;
             bandaVO.Integrantes = integrantes.ToArray();
 
-            try
-            {
+            try { 
                 ws.ModificarBandaWS(bandaVO);
 
                 return "Exito";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return ex.Message;
             }
-           
+
         }
 
         public String EliminarBandaForm(String id, string nombre, string genero, string anioCreacion, string anioSeparacion)
@@ -123,7 +137,11 @@ namespace AppWindows.FormularioBanda
             int separacion;
             if (!Int32.TryParse(id, out nro))
             {
-                return "Ingrese un id mayor a 0";
+                return "Ingrese un id tiene que ser numerico";
+            }
+            if (nro < 0)
+            {
+                return "El codigo tiene que ser positivo";
             }
             if (nombre == null || nombre == "")
             {
@@ -151,17 +169,16 @@ namespace AppWindows.FormularioBanda
             bandaVO.AnioCreacion = creacion;
             bandaVO.AnioSeparacion = separacion;
             bandaVO.Integrantes = integrantes.ToArray();
-            try
-            {
+            try {  
                 ws.EliminarBandaWS(bandaVO);
 
                 return "Exito";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return ex.Message;
             }
-            
+
         }
 
         public IntegranteVO ObtenerIntegranteForm(String id)
@@ -171,17 +188,14 @@ namespace AppWindows.FormularioBanda
             {
                 throw new Exception("Debe ingresar numerico el codigo el intergrante");
             }
+            if (nro < 0)
+            {
+                throw new Exception("El codigo tiene que ser positivo");
+            }
 
-            try
-            {
-                ServicioWebSoapClient ws = new ServicioWebSoapClient();
+            ServicioWebSoapClient ws = new ServicioWebSoapClient();
                 return ws.ObtenerIntegranteWS(nro);
-            }
-            catch(Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            
+           
 
         }
 
@@ -194,18 +208,17 @@ namespace AppWindows.FormularioBanda
             int nro;
             if (!Int32.TryParse(id, out nro))
             {
-                return null;
+                throw new Exception("El codigo es solamente numerico");
             }
 
-
+            if (nro < 0)
+            {
+                throw new Exception("El codigo tiene que ser positivo");
+            }
             ServiceReference.ServicioWebSoapClient ws = new ServiceReference.ServicioWebSoapClient();
-            try
-            {
+            
                 return ws.ObtenerBandaWS(nro);
-            }catch(Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+           
             
 
         }

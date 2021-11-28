@@ -38,26 +38,44 @@ namespace AppWindows.FormularioCancion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            ServiceReference.BandaVO banda = controlador.ObtenerBandaForm(txtBandaId.Text);
-            if (banda != null)
+            try
             {
-                lblBanda.Text = $"{banda.Nombre} {banda.GeneroMusical}";
-                controlador.AgregarBanda(banda);
-            }
-            else
+                ServiceReference.BandaVO banda = controlador.ObtenerBandaForm(txtBandaId.Text);
+                if (banda != null)
+                {
+                    lblBanda.Text = $"{banda.Nombre} {banda.GeneroMusical}";
+                    controlador.AgregarBanda(banda);
+                }
+                else
+                {
+                    lblBanda.Text = "No existe banda";
+                }
+            }catch(Exception ex)
             {
-                lblBanda.Text = "No existe banda";
+                lblError.Text = ex.Message;
             }
+            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            ServiceReference.CancionVO cancion = controlador.ObtenerCancionForm(txtId.Text);
-            txtAnio.Text = cancion.Anio.ToString();
-            txtDuracion.Text = cancion.Duracion.ToString();
-            txtGenero.Text = cancion.GeneroMusical;
-            txtId.Text = cancion.Id.ToString();
-            txtNombre.Text = cancion.Nombre;
+            try
+            {
+                ServiceReference.CancionVO cancion = controlador.ObtenerCancionForm(txtId.Text);
+                txtAnio.Text = cancion.Anio.ToString();
+                txtDuracion.Text = cancion.Duracion.ToString();
+                txtGenero.Text = cancion.GeneroMusical;
+                txtId.Text = cancion.Id.ToString();
+                txtNombre.Text = cancion.Nombre;
+            }catch(Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
+        }
+
+        private void FormCancion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

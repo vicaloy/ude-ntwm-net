@@ -30,53 +30,85 @@ namespace AppWindows
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.integranteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bandaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.albumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.albumToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bandaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.integranteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.integranteToolStripMenuItem,
-            this.bandaToolStripMenuItem,
-            this.cancionToolStripMenuItem,
-            this.albumToolStripMenuItem});
+            this.archivoToolStripMenuItem,
+            this.aBMToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // integranteToolStripMenuItem
+            // archivoToolStripMenuItem
             // 
-            this.integranteToolStripMenuItem.Name = "integranteToolStripMenuItem";
-            this.integranteToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.integranteToolStripMenuItem.Text = "Integrante";
-            this.integranteToolStripMenuItem.Click += new System.EventHandler(this.integranteToolStripMenuItem_Click);
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salirToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
             // 
-            // bandaToolStripMenuItem
+            // salirToolStripMenuItem
             // 
-            this.bandaToolStripMenuItem.Name = "bandaToolStripMenuItem";
-            this.bandaToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.bandaToolStripMenuItem.Text = "Banda";
-            this.bandaToolStripMenuItem.Click += new System.EventHandler(this.bandaToolStripMenuItem_Click);
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // cancionToolStripMenuItem
+            // aBMToolStripMenuItem
             // 
-            this.cancionToolStripMenuItem.Name = "cancionToolStripMenuItem";
-            this.cancionToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.cancionToolStripMenuItem.Text = "Cancion";
-            this.cancionToolStripMenuItem.Click += new System.EventHandler(this.cancionToolStripMenuItem_Click);
+            this.aBMToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.albumToolStripMenuItem1,
+            this.bandaToolStripMenuItem1,
+            this.cancionToolStripMenuItem1,
+            this.integranteToolStripMenuItem1});
+            this.aBMToolStripMenuItem.Name = "aBMToolStripMenuItem";
+            this.aBMToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.aBMToolStripMenuItem.Text = "ABM";
             // 
-            // albumToolStripMenuItem
+            // albumToolStripMenuItem1
             // 
-            this.albumToolStripMenuItem.Name = "albumToolStripMenuItem";
-            this.albumToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.albumToolStripMenuItem.Text = "Album";
-            this.albumToolStripMenuItem.Click += new System.EventHandler(this.albumToolStripMenuItem_Click);
+            this.albumToolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.albumToolStripMenuItem1.Image = global::AppWindows.Properties.Resources._2c8cd9dd_7c6a_4903_bc7b_1ea9d83c988b;
+            this.albumToolStripMenuItem1.Name = "albumToolStripMenuItem1";
+            this.albumToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.albumToolStripMenuItem1.Text = "Album";
+            this.albumToolStripMenuItem1.Click += new System.EventHandler(this.albumToolStripMenuItem1_Click);
+            // 
+            // bandaToolStripMenuItem1
+            // 
+            this.bandaToolStripMenuItem1.Image = global::AppWindows.Properties.Resources.a10dee19_5d78_4d9f_afb8_42d72fc015dd1;
+            this.bandaToolStripMenuItem1.Name = "bandaToolStripMenuItem1";
+            this.bandaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.bandaToolStripMenuItem1.Text = "Banda";
+            this.bandaToolStripMenuItem1.Click += new System.EventHandler(this.bandaToolStripMenuItem1_Click);
+            // 
+            // cancionToolStripMenuItem1
+            // 
+            this.cancionToolStripMenuItem1.Image = global::AppWindows.Properties.Resources.d0b2cb20_a3ee_4fc2_92a4_2a792bbeaea41;
+            this.cancionToolStripMenuItem1.Name = "cancionToolStripMenuItem1";
+            this.cancionToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.cancionToolStripMenuItem1.Text = "Cancion";
+            this.cancionToolStripMenuItem1.Click += new System.EventHandler(this.cancionToolStripMenuItem1_Click);
+            // 
+            // integranteToolStripMenuItem1
+            // 
+            this.integranteToolStripMenuItem1.Image = global::AppWindows.Properties.Resources.d892c47b_392c_4b52_bd59_a9ed9c96c7fd1;
+            this.integranteToolStripMenuItem1.Name = "integranteToolStripMenuItem1";
+            this.integranteToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.integranteToolStripMenuItem1.Text = "Integrante";
+            this.integranteToolStripMenuItem1.Click += new System.EventHandler(this.integranteToolStripMenuItem1_Click);
             // 
             // FormMenues
             // 
@@ -87,6 +119,7 @@ namespace AppWindows
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenues";
             this.Text = "FormMenues";
+            this.Load += new System.EventHandler(this.FormMenues_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -97,9 +130,12 @@ namespace AppWindows
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem integranteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bandaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cancionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem albumToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aBMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem albumToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bandaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cancionToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem integranteToolStripMenuItem1;
     }
 }
