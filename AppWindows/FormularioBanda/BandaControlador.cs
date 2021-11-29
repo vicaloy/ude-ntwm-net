@@ -65,7 +65,7 @@ namespace AppWindows.FormularioBanda
         }
             catch(Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
 
 }
@@ -125,7 +125,7 @@ namespace AppWindows.FormularioBanda
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
 
         }
@@ -176,7 +176,7 @@ namespace AppWindows.FormularioBanda
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
 
         }
@@ -193,8 +193,15 @@ namespace AppWindows.FormularioBanda
                 throw new Exception("El codigo tiene que ser positivo");
             }
 
-            ServicioWebSoapClient ws = new ServicioWebSoapClient();
+            try
+            {
+                ServicioWebSoapClient ws = new ServicioWebSoapClient();
                 return ws.ObtenerIntegranteWS(nro);
+            }
+            catch (Exception ex) {
+                throw new Exception("Ha ocurrido un error");
+            }
+            
            
 
         }
@@ -215,11 +222,15 @@ namespace AppWindows.FormularioBanda
             {
                 throw new Exception("El codigo tiene que ser positivo");
             }
-            ServiceReference.ServicioWebSoapClient ws = new ServiceReference.ServicioWebSoapClient();
-            
+            try {
+                ServicioWebSoapClient ws = new ServiceReference.ServicioWebSoapClient();
+
                 return ws.ObtenerBandaWS(nro);
-           
-            
+            }
+            catch (Exception ex) {
+                throw new Exception("Ha ocurrido un error");
+            }
+               
 
         }
     }

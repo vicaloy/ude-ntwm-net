@@ -57,7 +57,13 @@ namespace Logica
         }
 
         public IntegranteVO ObtenerIntegrante(int id) {
-            return new IntegranteVO(1, "Nombre", "Apellido", DateTime.Now, null);
+            Integrante integrante =  daoIntegrante.BuscarIntegrante(id);
+            IntegranteVO integranteVO = new IntegranteVO();
+            integranteVO.Apellido = integrante.Apellido;
+            integranteVO.FechaNacimiento = integrante.FechaNacimiento;
+            integranteVO.Foto = integrante.Foto;
+            integranteVO.Nombre = integrante.Nombre;
+            return integranteVO;
         }
 
         public void InsertarBanda(BandaVO bandaVO)
@@ -83,7 +89,8 @@ namespace Logica
 
         public BandaVO ObtenerBanda(int id)
         {
-            return new BandaVO(1, "Nombre", "Genero", 1900, 0, null);
+            Banda banda = daoBanda.BuscarBanda(id);
+            return new BandaVO(banda.Id, banda.Nombre, banda.GeneroMusical, banda.AnioCreacion, banda.AnioSeparacion, null);
         }
 
         public void InsertarAlbum(AlbumVO albumVO)
@@ -108,14 +115,10 @@ namespace Logica
         }
 
         public AlbumVO ObtenerAlbum(int id) {
-            AlbumVO a= new AlbumVO();
-            a.Nombre = "Album";
-            a.GeneroMusical = "Genero";
-            a.Id = 1;
-            a.Band = new BandaVO();
-            a.Band.Nombre = "Banda";
-
-            return a;
+            Album album = daoAlbum.BuscarAlbum(id);
+            BandaVO bandaVO = new BandaVO(album.Band.Id, album.Band.Nombre, album.Band.GeneroMusical, album.Band.AnioCreacion, album.Band.AnioSeparacion, null);
+            AlbumVO albumVO = new AlbumVO(album.Id, album.Nombre, album.Anio, album.GeneroMusical, bandaVO, null);
+            return albumVO;
         }
         public void InsertarCancion(CancionVO cancionVO)
         {
@@ -137,11 +140,12 @@ namespace Logica
 
         public CancionVO ObtenerCancion(int id)
         {
+            Cancion cancion = daoCancion.BuscarCancion(id);
             CancionVO cancionVO = new CancionVO();
-            cancionVO.Nombre = "Nombre";
-            cancionVO.GeneroMusical = "Genero";
-            cancionVO.Id = 1;
-            cancionVO.Anio = 123;
+            cancionVO.Nombre = cancion.Nombre;
+            cancionVO.GeneroMusical = cancion.GeneroMusical;
+            cancionVO.Id = cancion.Id;
+            cancionVO.Anio = cancion.Anio;
             return cancionVO;
         }
     }

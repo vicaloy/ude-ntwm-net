@@ -59,7 +59,7 @@ namespace AppWindows.FormularioCancion
                 return "Exito";
         }catch(Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
 
 }
@@ -77,9 +77,15 @@ namespace AppWindows.FormularioCancion
                 throw new Exception("El codigo tiene que ser numerico ");
             }
 
-           
-                ServiceReference.ServicioWebSoapClient ws = new ServiceReference.ServicioWebSoapClient();
+            try
+            {
+                ServicioWebSoapClient ws = new ServiceReference.ServicioWebSoapClient();
                 return ws.ObtenerBandaWS(nro);
+            }
+            catch (Exception ex) {
+                throw new Exception("Ha ocurrido un error");
+            }
+                
            
             
            
@@ -128,7 +134,7 @@ namespace AppWindows.FormularioCancion
                 return "Exito";
         }catch(Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
 
 }
@@ -182,7 +188,7 @@ namespace AppWindows.FormularioCancion
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
 
 
@@ -196,9 +202,15 @@ namespace AppWindows.FormularioCancion
                 throw new Exception("Solamente numerico");
             }
 
-
-            ServiceReference.ServicioWebSoapClient ws = new ServiceReference.ServicioWebSoapClient();
-            return ws.ObtenerCancionWS(nro);
+            try
+            {
+                ServicioWebSoapClient ws = new ServiceReference.ServicioWebSoapClient();
+                return ws.ObtenerCancionWS(nro);
+            }
+            catch (Exception ex) {
+                throw new Exception("Ha ocurrido un error");
+            }
+            
 
         }
 

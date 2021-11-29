@@ -6,20 +6,22 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    class Usuario
+    public class Usuario
     {
 
         public int Id { get; set; }
+        public string Nombre { get; set; }
         public string User { get; set; }
         public string Password { get; set; }
 
 
         public  Usuario() { }
 
-        public  Usuario(int nId, string nUsuario, string nPassword)
+        public  Usuario(int nId, string nNombre, string nUsuario, string nPassword)
         {
 
             Id = nId;
+            Nombre = nNombre;
             User = nUsuario;
             Password = nPassword;
 
