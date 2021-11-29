@@ -47,6 +47,8 @@
     <Compile Include="CancionVO.cs" />
     <Compile Include="IntegranteVO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResenaVO.cs" />
+    <Compile Include="UsuarioVO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

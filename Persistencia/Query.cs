@@ -26,7 +26,7 @@ namespace Persistencia
 
         public string AgregarBandaCancion() { return "INSERT INTO dbo.compuso (id_banda, id_cancion) VALUES (@id_banda, @id_cancion)"; }
 
-        public string AgregarUsuario() { return "INSERT INTO dbo.usuario (id, usuario, password) VALUES (@id, @usuario, @password)"; }
+        public string AgregarUsuario() { return "INSERT INTO dbo.usuario (id, nombre, usuario, password) VALUES (@id, @nombre, @usuario, @password)"; }
 
         public string ModificarIntegrante() { return "UPDATE dbo.integrante SET nombre = @nombre, apellido = @apellido, nacimiento = @nacimiento, foto = @foto WHERE id = @id"; }
 
@@ -36,7 +36,7 @@ namespace Persistencia
 
         public string ModificarAlbum() { return "UPDATE dbo.album SET anio_creacion = @anio_creacion, nombre = @nombre, genero = @genero, id_banda = @banda WHERE id = @id"; }
 
-        public string ModificarUsuario() { return "UPDATE dbo.usuario SET usuario = @usuario, password = @password WHERE id = @id"; }
+        public string ModificarUsuario() { return "UPDATE dbo.usuario SET nombre = @nombre, usuario = @usuario, password = @password WHERE id = @id"; }
 
         public string EliminarIntegrante() { return "DELETE FROM dbo.integrante WHERE id = @id"; }
 
@@ -73,6 +73,13 @@ namespace Persistencia
         public string BuscarAlbum() { return "SELECT * FROM dbo.album WHERE id = @id"; }
 
         public string BuscarUsuario() { return "SELECT * FROM dbo.usuario WHERE id = @id"; }
+
+        public string DarResena() { return "INSERT INTO dbo.resena (id, id_objeto, tipo, puntaje, texto) VALUES (@id, @objeto, @tipo, @puntaje, @texto)"; }
+
+        public string ListarResena() { return "SELECT * FROM dbo.resena WHERE id_objeto = @objeto"; }
+
+        public string ValidarContrasena() { return "SELECT password FROM dbo.usuario WHERE usuario = @usuario"; }
+
 
     }
 }

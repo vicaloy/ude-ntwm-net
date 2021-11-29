@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3lWy/3Q+Cz4ctFJYTpGpwcx+lSN5gH+AhErdgiQ1gGQEATct+XNTsXZECdD8E/pFFgUwswB1CUBD7PyImUPe0A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nahue\\source\\repos\\ude-ntwm-oblig\\Dominio\\Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nahue\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+  ],
+  "logs": []
+}

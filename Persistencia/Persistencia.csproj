@@ -47,6 +47,8 @@
     <Compile Include="DAOBanda.cs" />
     <Compile Include="DAOCancion.cs" />
     <Compile Include="DAOIntegrante.cs" />
+    <Compile Include="DAOResena.cs" />
+    <Compile Include="DAOUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Query.cs" />
   </ItemGroup>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelos
+namespace ValueObject
 {
-    public class Usuario
+    class UsuarioVO
     {
 
         public int Id { get; set; }
@@ -15,9 +15,9 @@ namespace Modelos
         public string Password { get; set; }
 
 
-        public  Usuario() { }
+        public UsuarioVO() { }
 
-        public  Usuario(int nId, string nNombre, string nUsuario, string nPassword)
+        public UsuarioVO(int nId, string nNombre, string nUsuario, string nPassword)
         {
 
             Id = nId;
