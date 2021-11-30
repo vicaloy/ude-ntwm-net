@@ -45,9 +45,8 @@ namespace AppWindows.FormularioIntegrante
             }
             catch(Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
-            // Agregar en API si el procediminto fue ejecutado correctamente o NO ?
            
         }
 
@@ -91,7 +90,7 @@ namespace AppWindows.FormularioIntegrante
                 return "Exito";
             }catch(Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
 }
 
@@ -129,7 +128,7 @@ namespace AppWindows.FormularioIntegrante
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
         }
 
@@ -151,7 +150,7 @@ namespace AppWindows.FormularioIntegrante
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception("Ha ocurrido un error");
             }
 
         }

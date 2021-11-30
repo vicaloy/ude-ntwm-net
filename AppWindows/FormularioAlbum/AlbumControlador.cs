@@ -16,13 +16,11 @@ namespace AppWindows.FormularioAlbum
         {
             int nro=0;
             int anioNro;
-           // if(id.Trim()!="")
-           // {
-                if (!Int32.TryParse(id, out nro))
-                {
-                    return "Ingrese un id mayor a 0";
-                }
-            // }
+            if (!Int32.TryParse(id, out nro))
+            {
+                return "Ingrese un id mayor a 0";
+            }
+            
             if (nro < 0)
             {
                 throw new Exception("El codigo tiene que ser positivo");
@@ -58,7 +56,7 @@ namespace AppWindows.FormularioAlbum
                 return "Exito";
             }catch(Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
            
         }
@@ -106,7 +104,7 @@ namespace AppWindows.FormularioAlbum
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
         }
 
@@ -153,7 +151,7 @@ namespace AppWindows.FormularioAlbum
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                return "Ha ocurrido un error";
             }
 
         }
@@ -176,7 +174,7 @@ namespace AppWindows.FormularioAlbum
                 return bandaVO;
             }catch(Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception("Ha ocurrido un error");
             }
         }
 
@@ -203,7 +201,7 @@ namespace AppWindows.FormularioAlbum
                 return ws.ObtenerCancionWS(nro);
             }catch(Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception("Ha ocurrido un error");
             }
 
         }
@@ -226,7 +224,7 @@ namespace AppWindows.FormularioAlbum
                 return ws.ObtenerAlbumWS(nro);
             }catch(Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception("Ha ocurrido un error");
             }
             
 

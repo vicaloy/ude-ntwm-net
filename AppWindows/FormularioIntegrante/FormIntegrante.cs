@@ -42,10 +42,17 @@ namespace AppWindows.FormularioIntegrante
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            ServiceReference.IntegranteVO integranteVO = controlador.ObtenerIntegranteForm(txtId.Text);
-            txtNombre.Text = integranteVO.Nombre;
-            txtApellido.Text = integranteVO.Apellido;
-            pickerFecha.Value = integranteVO.FechaNacimiento;
+            try
+            { 
+                ServiceReference.IntegranteVO integranteVO = controlador.ObtenerIntegranteForm(txtId.Text);
+                txtNombre.Text = integranteVO.Nombre;
+                txtApellido.Text = integranteVO.Apellido;
+                pickerFecha.Value = integranteVO.FechaNacimiento;
+            }
+            catch (Exception ex) {
+                lblError.Text = ex.Message;
+            }
+           
 
         }
 
