@@ -16,5 +16,13 @@ namespace Logica
 
         List<ResenaVO> ListarResenas(int objeto, string tipo);
 
+        List<AlbumVO> ListarAlbums();
+
+        List<BandaVO> ListarBandas();
+
+        List<CancionVO> ListarCanciones();
+
+        List<IntegranteVO> ListarIntegrantes();
+
     }
 }

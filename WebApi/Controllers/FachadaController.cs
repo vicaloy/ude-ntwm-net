@@ -35,5 +35,33 @@ namespace WebApi.Controllers
         {
             return fachada.ListarResenas(objeto, tipo);
         }
+
+        public IEnumerable<AlbumVO> ListarAlbums()
+        {
+
+            return fachada.ListarAlbums();
+
+        }
+
+        public IEnumerable<BandaVO> ListarBandas()
+        {
+
+            return fachada.ListarBandas();
+
+        }
+
+        public IEnumerable<CancionVO> ListarCanciones()
+        {
+
+            return fachada.ListarCanciones();
+
+        }
+
+        public IEnumerable<IntegranteVO> ListarIntegrantes()
+        {
+
+            return fachada.ListarIntegrantes();
+
+        }
     }
 }

@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Persistencia"
   ],
-  "SelectedNode": "\\Oblig.sln",
+  "SelectedNode": "\\Persistencia\\DAOResena.cs",
   "PreviewInSolutionExplorer": false
 }

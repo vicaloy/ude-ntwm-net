@@ -176,5 +176,79 @@ namespace Logica
             return resenasVO;
 
         }
+
+        public List<AlbumVO> ListarAlbums()
+        {
+            List<AlbumVO> albumsVO = new List<AlbumVO>();
+            List<Album> albums = daoAlbum.ListarAlbumes();
+
+            foreach (Album album in albums)
+            {
+
+                List<CancionVO> cancionesVO = new List<CancionVO>();
+
+                foreach (Cancion cancion in album.Canciones)
+                {
+                    CancionVO cancionVO = new CancionVO(cancion.Id, cancion.Nombre, cancion.Duracion, cancion.Anio, cancion.GeneroMusical, null);
+                    cancionesVO.Add(cancionVO);
+                }
+
+                BandaVO bandaVO = new BandaVO(album.Band.Id, album.Band.Nombre, album.Band.GeneroMusical, album.Band.AnioCreacion, album.Band.AnioSeparacion, null);
+
+                AlbumVO albumVO = new AlbumVO(album.Id, album.Nombre, album.Anio, album.GeneroMusical, bandaVO, cancionesVO);
+                albumsVO.Add(albumVO);
+            }
+
+            return albumsVO;
+        }
+
+        public List<BandaVO> ListarBandas()
+        {
+            List<BandaVO> bandasVO = new List<BandaVO>();
+            List<Banda> bandas = daoBanda.ListarBandas();
+
+            foreach (Banda banda in bandas)
+            {
+
+                BandaVO bandaVO = new BandaVO(banda.Id, banda.Nombre, banda.GeneroMusical, banda.AnioCreacion, banda.AnioSeparacion, null);
+                bandasVO.Add(bandaVO);
+            }
+
+            return bandasVO;
+        }
+
+        public List<CancionVO> ListarCanciones()
+        {
+
+            List<CancionVO> cancionesVO = new List<CancionVO>();
+            List<Cancion> canciones = daoCancion.ListarCanciones();
+
+            foreach (Cancion cancion in canciones)
+            {
+                CancionVO cancionVO = new CancionVO(cancion.Id, cancion.Nombre, cancion.Duracion, cancion.Anio, cancion.GeneroMusical, null);
+                cancionesVO.Add(cancionVO);
+            }
+
+            return cancionesVO;
+
+        }
+
+        public List<IntegranteVO> ListarIntegrantes()
+        {
+
+            List<IntegranteVO> integrantesVO = new List<IntegranteVO>();
+            List<Integrante> integrantes = daoIntegrante.ListarIntegrantes();
+
+            foreach (Integrante integrante in integrantes)
+            {
+                IntegranteVO integranteVO = new IntegranteVO(integrante.Id, integrante.Nombre, integrante.Apellido, integrante.FechaNacimiento, integrante.Foto);
+                integrantesVO.Add(integranteVO);
+            }
+
+            return integrantesVO;
+
+        }
+
+
     }
 }
