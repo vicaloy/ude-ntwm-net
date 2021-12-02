@@ -165,7 +165,7 @@ namespace Persistencia
 
             SqlDataReader resultado = comando.ExecuteReader();
 
-            connection.Close();
+            
 
             while (resultado.Read())
             {
@@ -177,6 +177,8 @@ namespace Persistencia
 
                 canciones.Add(cancion);
             }
+
+            connection.Close();
 
             return canciones;
         }
@@ -199,8 +201,6 @@ namespace Persistencia
 
             SqlDataReader resultado = comando.ExecuteReader();
 
-            connection.Close();
-
             while (resultado.Read())
             {
 
@@ -211,6 +211,8 @@ namespace Persistencia
                 cancion.GeneroMusical = Convert.ToString(resultado["genero"]);
 
             }
+
+            connection.Close();
 
             return cancion;
         }

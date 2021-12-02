@@ -1,0 +1,13 @@
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Release\Logica.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Release\Logica.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Release\Modelos.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Release\Persistencia.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Release\ValueObject.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Release\Modelos.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Release\Persistencia.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Release\ValueObject.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\obj\Release\Logica.csproj.AssemblyReference.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\obj\Release\Logica.csproj.CoreCompileInputs.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\obj\Release\Logica.csproj.CopyComplete
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\obj\Release\Logica.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\obj\Release\Logica.pdb

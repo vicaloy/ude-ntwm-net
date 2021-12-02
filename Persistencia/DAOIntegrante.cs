@@ -116,8 +116,6 @@ namespace Persistencia
 
             SqlDataReader resultado = comando.ExecuteReader();
 
-            connection.Close();
-
             while (resultado.Read())
             {
                 integrante.Id = Convert.ToInt32(resultado["id"]);
@@ -128,6 +126,8 @@ namespace Persistencia
 
                 integrantes.Add(integrante);
             }
+
+            connection.Close();
 
             return integrantes;
         }
@@ -150,8 +150,6 @@ namespace Persistencia
 
             SqlDataReader resultado = comando.ExecuteReader();
 
-            connection.Close();
-
             while (resultado.Read())
             {
 
@@ -162,6 +160,8 @@ namespace Persistencia
                 //integrante.Foto = Byte.Parse(resultado["foto"]);
 
             }
+
+            connection.Close();
 
             return integrante;
         }

@@ -1,0 +1,6 @@
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\ValueObject\bin\Release\ValueObject.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\ValueObject\bin\Release\ValueObject.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\ValueObject\obj\Release\ValueObject.csproj.AssemblyReference.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\ValueObject\obj\Release\ValueObject.csproj.CoreCompileInputs.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\ValueObject\obj\Release\ValueObject.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\ValueObject\obj\Release\ValueObject.pdb

@@ -8,3 +8,17 @@ C:\Users\victo\source\repos\Oblig\AppWindows\bin\Release\AppWindows.exe
 C:\Users\victo\source\repos\Oblig\AppWindows\bin\Release\AppWindows.pdb
 C:\Users\victo\source\repos\Oblig\AppWindows\obj\Release\AppWindows.exe
 C:\Users\victo\source\repos\Oblig\AppWindows\obj\Release\AppWindows.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\bin\Release\AppWindows.exe.config
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\bin\Release\AppWindows.exe
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\bin\Release\AppWindows.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\obj\Release\AppWindows.csproj.AssemblyReference.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\obj\Release\AppWindows.FormMenues.resources
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\obj\Release\AppWindows.FormularioAlbum.FormAlbum.resources
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\obj\Release\AppWindows.FormularioBanda.FormBanda.resources
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\obj\Release\AppWindows.FormularioCancion.FormCancion.resources
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\obj\Release\AppWindows.FormularioIntegrante.FormIntegrante.resources
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\obj\Release\AppWindows.Properties.Resources.resources
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\obj\Release\AppWindows.csproj.GenerateResource.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\obj\Release\AppWindows.csproj.CoreCompileInputs.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\obj\Release\AppWindows.exe
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\AppWindows\obj\Release\AppWindows.pdb

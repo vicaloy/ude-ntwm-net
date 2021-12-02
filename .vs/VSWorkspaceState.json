@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Persistencia"
+    "\\Logica"
   ],
-  "SelectedNode": "\\Persistencia\\DAOResena.cs",
+  "SelectedNode": "\\Logica\\Fachada.cs",
   "PreviewInSolutionExplorer": false
 }

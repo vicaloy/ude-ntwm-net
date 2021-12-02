@@ -73,8 +73,6 @@ namespace Persistencia
 
             SqlDataReader resultado = comando.ExecuteReader();
 
-            connection.Close();
-
             while (resultado.Read())
             {
                 resena.Id = Convert.ToInt32(resultado["id"]);
@@ -85,6 +83,8 @@ namespace Persistencia
 
                 resenas.Add(resena);
             }
+
+            connection.Close();
 
             return resenas;
         }

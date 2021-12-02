@@ -164,8 +164,6 @@ namespace Persistencia
 
             SqlDataReader resultado = comando.ExecuteReader();
 
-            connection.Close();
-
             while (resultado.Read())
             {
                 album.Id = Convert.ToInt32(resultado["id"]);
@@ -177,6 +175,8 @@ namespace Persistencia
 
                 albums.Add(album);
             }
+
+            connection.Close();
 
             return albums;
         }
@@ -199,8 +199,6 @@ namespace Persistencia
 
             SqlDataReader resultado = comando.ExecuteReader();
 
-            connection.Close();
-
             while (resultado.Read())
             {
 
@@ -212,6 +210,8 @@ namespace Persistencia
                 album.GeneroMusical = Convert.ToString(resultado["genero"]);
 
             }
+
+            connection.Close();
 
             return album;
         }

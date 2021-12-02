@@ -1,0 +1,9 @@
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\bin\Release\Persistencia.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\bin\Release\Persistencia.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\bin\Release\Modelos.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\bin\Release\Modelos.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\obj\Release\Persistencia.csproj.AssemblyReference.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\obj\Release\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\obj\Release\Persistencia.csproj.CopyComplete
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\obj\Release\Persistencia.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\obj\Release\Persistencia.pdb

@@ -69,9 +69,9 @@ namespace Persistencia
 
             SqlDataReader resultado = comando.ExecuteReader();
 
-            connection.Close();
-
             resultado.Read();
+
+            connection.Close();
 
             if (usuario.Password != resultado["password"])
             {
