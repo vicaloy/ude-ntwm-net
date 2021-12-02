@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ValueObject
 {
-    class ResenaVO
+    public class ResenaVO
     {
 
         public int Id { get; set; }

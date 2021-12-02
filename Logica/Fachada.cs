@@ -9,7 +9,7 @@ using ValueObject;
 
 namespace Logica
 {
-    public class Fachada: IFachada
+    public class Fachada: IFachada, IFachadaWeb
     {
         static Fachada instance;
 
@@ -31,6 +31,8 @@ namespace Logica
         DAOAlbum daoAlbum = DAOAlbum.Instance();
         DAOCancion daoCancion = DAOCancion.Instance();
         DAOBanda daoBanda = DAOBanda.Instance();
+        DAOResena daoresegna = DAOResena.Instance();
+        DAOUsuario daousuario = DAOUsuario.Instance();
 
         public void InsertarIntegrante(IntegranteVO integranteVO)
         {
@@ -143,6 +145,36 @@ namespace Logica
             cancionVO.Id = 1;
             cancionVO.Anio = 123;
             return cancionVO;
+        }
+
+        public void RegistrarUsuario(UsuarioVO nUsuario)
+        {
+
+            Usuario usuario = new Usuario(nUsuario.Id, nUsuario.Nombre, nUsuario.User, nUsuario.Password);
+            daousuario.InsertarUsuario(usuario);
+
+        }
+
+        public void InsertarResena(ResenaVO nResena)
+        {
+            Resena resena = new Resena(nResena.Id, nResena.Id_Objeto, nResena.Tipo, nResena.Puntaje, nResena.Texto);
+            daoresegna.InsertarResena(resena);
+        }
+
+        public List<ResenaVO> ListarResenas(int objeto, string tipo)
+        {
+
+            List<ResenaVO> resenasVO = new List<ResenaVO>();
+            List<Resena>  resenas = daoresegna.ListarResena(objeto, tipo);
+
+            foreach (Resena resena in resenas)
+            {
+                ResenaVO resenaVO = new ResenaVO(resena.Id, resena.Id_Objeto, resena.Tipo, resena.Puntaje, resena.Texto);
+                resenasVO.Add(resenaVO);
+            }
+
+            return resenasVO;
+
         }
     }
 }

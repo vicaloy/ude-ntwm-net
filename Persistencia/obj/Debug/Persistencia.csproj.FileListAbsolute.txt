@@ -7,3 +7,12 @@ C:\Users\victo\source\repos\Oblig\Persistencia\obj\Debug\Persistencia.csproj.Cor
 C:\Users\victo\source\repos\Oblig\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\victo\source\repos\Oblig\Persistencia\obj\Debug\Persistencia.pdb
 C:\Users\victo\source\repos\Oblig\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\bin\Debug\Modelos.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\bin\Debug\Modelos.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\obj\Debug\Persistencia.csproj.AssemblyReference.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Persistencia\obj\Debug\Persistencia.pdb

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Persistencia
 {
-    class DAOUsuario
+    public class DAOUsuario
     {
 
         public Query query = new Query();
