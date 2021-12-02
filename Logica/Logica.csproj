@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Fachada.cs" />
     <Compile Include="IFachada.cs" />
+    <Compile Include="IFachadaWeb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

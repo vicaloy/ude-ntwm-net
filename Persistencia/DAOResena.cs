@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Persistencia
 {
-    class DAOResena
+    public class DAOResena
     {
 
         public Query query = new Query();
@@ -51,6 +51,42 @@ namespace Persistencia
             comando.ExecuteNonQuery();
 
             connection.Close();
+        }
+
+        public List<Resena> ListarResena(int objeto, string tipo)
+        {
+            List<Resena> resenas = new List<Resena>();
+
+            Resena resena = new Resena();
+
+            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            SqlConnection connection = new SqlConnection(con);
+
+            connection.Open();
+
+            string cmd = query.ListarResena();
+
+            SqlCommand comando = new SqlCommand(cmd, connection);
+
+            comando.Parameters.AddWithValue("@objeto", objeto);
+            comando.Parameters.AddWithValue("@tipo", tipo);
+
+            SqlDataReader resultado = comando.ExecuteReader();
+
+            connection.Close();
+
+            while (resultado.Read())
+            {
+                resena.Id = Convert.ToInt32(resultado["id"]);
+                resena.Id_Objeto = Convert.ToInt32(resultado["id_objeto"]);
+                resena.Tipo = Convert.ToString(resultado["tipo"]);
+                resena.Puntaje = Convert.ToInt32(resultado["puntaje"]);
+                resena.Texto = Convert.ToString(resultado["texto"]);
+
+                resenas.Add(resena);
+            }
+
+            return resenas;
         }
 
     }

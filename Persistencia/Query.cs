@@ -76,7 +76,7 @@ namespace Persistencia
 
         public string DarResena() { return "INSERT INTO dbo.resena (id, id_objeto, tipo, puntaje, texto) VALUES (@id, @objeto, @tipo, @puntaje, @texto)"; }
 
-        public string ListarResena() { return "SELECT * FROM dbo.resena WHERE id_objeto = @objeto"; }
+        public string ListarResena() { return "SELECT * FROM dbo.resena WHERE id_objeto = @objeto AND tipo = @tipo"; }
 
         public string ValidarContrasena() { return "SELECT password FROM dbo.usuario WHERE usuario = @usuario"; }
 

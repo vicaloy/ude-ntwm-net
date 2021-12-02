@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelos", "Modelos\Modelos.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Persistencia\Persistencia.csproj", "{261DA79F-3FFA-468B-BA10-8DDFBD99BC90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{F1530D20-F8DC-4BAE-AAE5-04E92E8773C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +56,10 @@ Global
 		{261DA79F-3FFA-468B-BA10-8DDFBD99BC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{261DA79F-3FFA-468B-BA10-8DDFBD99BC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{261DA79F-3FFA-468B-BA10-8DDFBD99BC90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1530D20-F8DC-4BAE-AAE5-04E92E8773C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1530D20-F8DC-4BAE-AAE5-04E92E8773C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1530D20-F8DC-4BAE-AAE5-04E92E8773C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1530D20-F8DC-4BAE-AAE5-04E92E8773C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

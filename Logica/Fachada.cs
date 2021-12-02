@@ -9,7 +9,7 @@ using ValueObject;
 
 namespace Logica
 {
-    public class Fachada: IFachada
+    public class Fachada: IFachada, IFachadaWeb
     {
         static Fachada instance;
 
@@ -31,6 +31,8 @@ namespace Logica
         DAOAlbum daoAlbum = DAOAlbum.Instance();
         DAOCancion daoCancion = DAOCancion.Instance();
         DAOBanda daoBanda = DAOBanda.Instance();
+        DAOResena daoresegna = DAOResena.Instance();
+        DAOUsuario daousuario = DAOUsuario.Instance();
 
         public void InsertarIntegrante(IntegranteVO integranteVO)
         {
@@ -148,5 +150,109 @@ namespace Logica
             cancionVO.Anio = cancion.Anio;
             return cancionVO;
         }
+
+        public void RegistrarUsuario(UsuarioVO nUsuario)
+        {
+
+            Usuario usuario = new Usuario(nUsuario.Id, nUsuario.Nombre, nUsuario.User, nUsuario.Password);
+            daousuario.InsertarUsuario(usuario);
+
+        }
+
+        public void InsertarResena(ResenaVO nResena)
+        {
+            Resena resena = new Resena(nResena.Id, nResena.Id_Objeto, nResena.Tipo, nResena.Puntaje, nResena.Texto);
+            daoresegna.InsertarResena(resena);
+        }
+
+        public List<ResenaVO> ListarResenas(int objeto, string tipo)
+        {
+
+            List<ResenaVO> resenasVO = new List<ResenaVO>();
+            List<Resena>  resenas = daoresegna.ListarResena(objeto, tipo);
+
+            foreach (Resena resena in resenas)
+            {
+                ResenaVO resenaVO = new ResenaVO(resena.Id, resena.Id_Objeto, resena.Tipo, resena.Puntaje, resena.Texto);
+                resenasVO.Add(resenaVO);
+            }
+
+            return resenasVO;
+
+        }
+
+        public List<AlbumVO> ListarAlbums()
+        {
+            List<AlbumVO> albumsVO = new List<AlbumVO>();
+            List<Album> albums = daoAlbum.ListarAlbumes();
+
+            foreach (Album album in albums)
+            {
+
+                List<CancionVO> cancionesVO = new List<CancionVO>();
+
+                foreach (Cancion cancion in album.Canciones)
+                {
+                    CancionVO cancionVO = new CancionVO(cancion.Id, cancion.Nombre, cancion.Duracion, cancion.Anio, cancion.GeneroMusical, null);
+                    cancionesVO.Add(cancionVO);
+                }
+
+                BandaVO bandaVO = new BandaVO(album.Band.Id, album.Band.Nombre, album.Band.GeneroMusical, album.Band.AnioCreacion, album.Band.AnioSeparacion, null);
+
+                AlbumVO albumVO = new AlbumVO(album.Id, album.Nombre, album.Anio, album.GeneroMusical, bandaVO, cancionesVO);
+                albumsVO.Add(albumVO);
+            }
+
+            return albumsVO;
+        }
+
+        public List<BandaVO> ListarBandas()
+        {
+            List<BandaVO> bandasVO = new List<BandaVO>();
+            List<Banda> bandas = daoBanda.ListarBandas();
+
+            foreach (Banda banda in bandas)
+            {
+
+                BandaVO bandaVO = new BandaVO(banda.Id, banda.Nombre, banda.GeneroMusical, banda.AnioCreacion, banda.AnioSeparacion, null);
+                bandasVO.Add(bandaVO);
+            }
+
+            return bandasVO;
+        }
+
+        public List<CancionVO> ListarCanciones()
+        {
+
+            List<CancionVO> cancionesVO = new List<CancionVO>();
+            List<Cancion> canciones = daoCancion.ListarCanciones();
+
+            foreach (Cancion cancion in canciones)
+            {
+                CancionVO cancionVO = new CancionVO(cancion.Id, cancion.Nombre, cancion.Duracion, cancion.Anio, cancion.GeneroMusical, null);
+                cancionesVO.Add(cancionVO);
+            }
+
+            return cancionesVO;
+
+        }
+
+        public List<IntegranteVO> ListarIntegrantes()
+        {
+
+            List<IntegranteVO> integrantesVO = new List<IntegranteVO>();
+            List<Integrante> integrantes = daoIntegrante.ListarIntegrantes();
+
+            foreach (Integrante integrante in integrantes)
+            {
+                IntegranteVO integranteVO = new IntegranteVO(integrante.Id, integrante.Nombre, integrante.Apellido, integrante.FechaNacimiento, integrante.Foto);
+                integrantesVO.Add(integranteVO);
+            }
+
+            return integrantesVO;
+
+        }
+
+
     }
 }

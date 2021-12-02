@@ -10,3 +10,16 @@ C:\Users\victo\source\repos\Oblig\Logica\obj\Debug\Logica.csproj.AssemblyReferen
 C:\Users\victo\source\repos\Oblig\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
 C:\Users\victo\source\repos\Oblig\Logica\obj\Debug\Logica.dll
 C:\Users\victo\source\repos\Oblig\Logica\obj\Debug\Logica.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Debug\Logica.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Debug\Logica.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Debug\Modelos.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Debug\Persistencia.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Debug\ValueObject.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Debug\Modelos.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Debug\Persistencia.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\bin\Debug\ValueObject.pdb
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\obj\Debug\Logica.dll
+C:\Users\nahue\Source\Repos\ude-ntwm-oblig\Logica\obj\Debug\Logica.pdb
