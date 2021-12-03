@@ -14,11 +14,16 @@ namespace WebApi.Controllers
 
         IFachadaWeb fachada = Fachada.Instance();
 
-        public IEnumerable<AlbumVO> ListarAlbums()
+        public IEnumerable<AlbumVO> GetAllAlbums()
         {
 
             return fachada.ListarAlbums();
 
+        }
+
+        public AlbumVO GetAlbum(int id)
+        {
+            return fachada.ObtenerAlbum(id);
         }
 
     }

@@ -59,7 +59,8 @@ namespace Logica
         }
 
         public IntegranteVO ObtenerIntegrante(int id) {
-            return new IntegranteVO(1, "Nombre", "Apellido", DateTime.Now, null);
+            Integrante integrante = daoIntegrante.BuscarIntegrante(id);
+            return new IntegranteVO(integrante.Id, integrante.Nombre, integrante.Apellido, integrante.FechaNacimiento, integrante.Foto);
         }
 
         public void InsertarBanda(BandaVO bandaVO)
@@ -85,7 +86,8 @@ namespace Logica
 
         public BandaVO ObtenerBanda(int id)
         {
-            return new BandaVO(1, "Nombre", "Genero", 1900, 0, null);
+            Banda banda = daoBanda.BuscarBanda(id);
+            return new BandaVO(banda.Id, banda.Nombre, banda.GeneroMusical, banda.AnioCreacion, banda.AnioSeparacion, null);
         }
 
         public void InsertarAlbum(AlbumVO albumVO)
@@ -110,14 +112,9 @@ namespace Logica
         }
 
         public AlbumVO ObtenerAlbum(int id) {
-            AlbumVO a= new AlbumVO();
-            a.Nombre = "Album";
-            a.GeneroMusical = "Genero";
-            a.Id = 1;
-            a.Band = new BandaVO();
-            a.Band.Nombre = "Banda";
 
-            return a;
+            Album album = daoAlbum.BuscarAlbum(id);
+            return new AlbumVO(album.Id, album.Nombre, album.Anio, album.GeneroMusical, null, null);
         }
         public void InsertarCancion(CancionVO cancionVO)
         {
@@ -139,12 +136,8 @@ namespace Logica
 
         public CancionVO ObtenerCancion(int id)
         {
-            CancionVO cancionVO = new CancionVO();
-            cancionVO.Nombre = "Nombre";
-            cancionVO.GeneroMusical = "Genero";
-            cancionVO.Id = 1;
-            cancionVO.Anio = 123;
-            return cancionVO;
+            Cancion cancion = daoCancion.BuscarCancion(id);
+            return new CancionVO(cancion.Id, cancion.Nombre, cancion.Duracion, cancion.Anio, cancion.GeneroMusical, null);
         }
 
         public void RegistrarUsuario(UsuarioVO nUsuario)

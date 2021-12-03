@@ -14,11 +14,16 @@ namespace WebApi.Controllers
 
         IFachadaWeb fachada = Fachada.Instance();
 
-        public IEnumerable<BandaVO> ListarBandas()
+        public IEnumerable<BandaVO> GetAllBandas()
         {
 
             return fachada.ListarBandas();
 
+        }
+
+        public BandaVO GetBanda(int id)
+        {
+            return fachada.ObtenerBanda(id);
         }
 
     }

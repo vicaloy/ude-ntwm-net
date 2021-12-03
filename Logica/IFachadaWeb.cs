@@ -24,5 +24,12 @@ namespace Logica
 
         List<IntegranteVO> ListarIntegrantes();
 
+        CancionVO ObtenerCancion(int id);
+
+        AlbumVO ObtenerAlbum(int id);
+
+        BandaVO ObtenerBanda(int id);
+
+        IntegranteVO ObtenerIntegrante(int id);
     }
 }

@@ -21,5 +21,10 @@ namespace WebApi.Controllers
 
         }
 
+        public IntegranteVO GetIntegrante(int id)
+        {
+            return fachada.ObtenerIntegrante(id);
+        }
+
     }
 }
