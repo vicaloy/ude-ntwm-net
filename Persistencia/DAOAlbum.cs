@@ -33,83 +33,124 @@ namespace Persistencia
 
         public void InsertarAlbum(Album album)
         {
+            try { 
+                String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(con);
 
-            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection connection = new SqlConnection(con);
+                connection.Open();
 
-            connection.Open();
+                string cmd = query.AgregarAlbum();
 
-            string cmd = query.AgregarAlbum();
+                SqlCommand comando = new SqlCommand(cmd, connection);
 
-            SqlCommand comando = new SqlCommand(cmd, connection);
+                comando.Parameters.AddWithValue("@id", album.Id);
+                comando.Parameters.AddWithValue("@anio_creacion", album.Anio);
+                comando.Parameters.AddWithValue("@nombre", album.Nombre);
+                comando.Parameters.AddWithValue("@genero", album.GeneroMusical);
+                comando.Parameters.AddWithValue("@banda", album.Band.Id);
 
-            comando.Parameters.AddWithValue("@id", album.Id);
-            comando.Parameters.AddWithValue("@anio_creacion", album.Anio);
-            comando.Parameters.AddWithValue("@nombre", album.Nombre);
-            comando.Parameters.AddWithValue("@genero", album.GeneroMusical);
-            comando.Parameters.AddWithValue("@banda", album.Band.Id);
+                comando.ExecuteNonQuery();
 
-            comando.ExecuteNonQuery();
-
-            connection.Close();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public void ModificarAlbum(Album album)
         {
+            try { 
+                String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(con);
 
-            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection connection = new SqlConnection(con);
+                connection.Open();
 
-            connection.Open();
+                string cmd = query.ModificarAlbum();
 
-            string cmd = query.ModificarAlbum();
+                SqlCommand comando = new SqlCommand(cmd, connection);
 
-            SqlCommand comando = new SqlCommand(cmd, connection);
+                comando.Parameters.AddWithValue("@id", album.Id);
+                comando.Parameters.AddWithValue("@anio_creacion", album.Anio);
+                comando.Parameters.AddWithValue("@nombre", album.Nombre);
+                comando.Parameters.AddWithValue("@genero", album.GeneroMusical);
+                comando.Parameters.AddWithValue("@banda", album.Band.Id);
 
-            comando.Parameters.AddWithValue("@id", album.Id);
-            comando.Parameters.AddWithValue("@anio_creacion", album.Anio);
-            comando.Parameters.AddWithValue("@nombre", album.Nombre);
-            comando.Parameters.AddWithValue("@genero", album.GeneroMusical);
-            comando.Parameters.AddWithValue("@banda", album.Band.Id);
+                comando.ExecuteNonQuery();
 
-            comando.ExecuteNonQuery();
-
-            connection.Close();
-
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public void EliminarAlbum(Album album)
         {
+            try { 
+                String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(con);
 
-            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection connection = new SqlConnection(con);
+                connection.Open();
 
-            connection.Open();
+                string cmd = query.EliminarAlbum();
 
-            string cmd = query.EliminarAlbum();
+                SqlCommand comando = new SqlCommand(cmd, connection);
 
-            SqlCommand comando = new SqlCommand(cmd, connection);
+                comando.Parameters.AddWithValue("@id", album.Id);
 
-            comando.Parameters.AddWithValue("@id", album.Id);
+                comando.ExecuteNonQuery();
 
-            comando.ExecuteNonQuery();
-
-            connection.Close();
-
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public void AgregarCanciones(Album album, List<Cancion> canciones)
         {
+            try { 
+                String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(con);
 
-            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection connection = new SqlConnection(con);
+                connection.Open();
 
-            connection.Open();
+                foreach (Cancion cancion in canciones)
+                {
 
-            foreach (Cancion cancion in canciones)
+                    string cmd = query.AgregarCancionAlbum();
+
+                    SqlCommand comando = new SqlCommand(cmd, connection);
+
+                    comando.Parameters.AddWithValue("@id_album", album.Id);
+                    comando.Parameters.AddWithValue("@id_cancion", cancion.Id);
+
+                    comando.ExecuteNonQuery();
+
+                }
+
+                connection.Close();
+            }
+            catch (Exception ex)
             {
+                throw new Exception(ex.Message);
+            }
+        }
 
-                string cmd = query.AgregarCancionAlbum();
+        public void EliminarCancion(Album album, Cancion cancion)
+        {
+            try { 
+            
+                String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(con);
+
+                connection.Open();
+
+                string cmd = query.EliminarCancionAlbum();
 
                 SqlCommand comando = new SqlCommand(cmd, connection);
 
@@ -118,102 +159,93 @@ namespace Persistencia
 
                 comando.ExecuteNonQuery();
 
+
+                connection.Close();
             }
-
-            connection.Close();
-
-        }
-
-        public void EliminarCancion(Album album, Cancion cancion)
-        {
-
-            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection connection = new SqlConnection(con);
-
-            connection.Open();
-
-            string cmd = query.EliminarCancionAlbum();
-
-            SqlCommand comando = new SqlCommand(cmd, connection);
-
-            comando.Parameters.AddWithValue("@id_album", album.Id);
-            comando.Parameters.AddWithValue("@id_cancion", cancion.Id);
-
-            comando.ExecuteNonQuery();
-
-
-            connection.Close();
-
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public List<Album> ListarAlbumes()
         {
+            try { 
+                List<Album> albums = new List<Album>();
 
-            List<Album> albums = new List<Album>();
+                Album album = new Album();
 
-            Album album = new Album();
+                String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(con);
 
-            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection connection = new SqlConnection(con);
+                connection.Open();
 
-            connection.Open();
+                string cmd = query.ListarAlbumes();
 
-            string cmd = query.ListarAlbumes();
+                SqlCommand comando = new SqlCommand(cmd, connection);
 
-            SqlCommand comando = new SqlCommand(cmd, connection);
+                SqlDataReader resultado = comando.ExecuteReader();
 
-            SqlDataReader resultado = comando.ExecuteReader();
+                while (resultado.Read())
+                {
+                    album.Id = Convert.ToInt32(resultado["id"]);
+                    album.Nombre = Convert.ToString(resultado["nombre"]);
+                    album.Anio = Convert.ToInt32(resultado["anio_creacion"]);
+                    album.Band = new Banda();
+                    album.Band.Id = Convert.ToInt32(resultado["id_banda"]);
+                    album.GeneroMusical = Convert.ToString(resultado["genero"]);
 
-            while (resultado.Read())
-            {
-                album.Id = Convert.ToInt32(resultado["id"]);
-                album.Nombre = Convert.ToString(resultado["nombre"]);
-                album.Anio = Convert.ToInt32(resultado["anio_creacion"]);
-                album.Band = new Banda();
-                album.Band.Id = Convert.ToInt32(resultado["id_banda"]);
-                album.GeneroMusical = Convert.ToString(resultado["genero"]);
+                    albums.Add(album);
+                }
 
-                albums.Add(album);
+                connection.Close();
+
+                return albums;
             }
-
-            connection.Close();
-
-            return albums;
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public Album BuscarAlbum(int bId)
         {
+            try { 
+                Album album = new Album();
 
-            Album album = new Album();
+                String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(con);
 
-            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection connection = new SqlConnection(con);
+                connection.Open();
 
-            connection.Open();
+                string cmd = query.BuscarAlbum();
 
-            string cmd = query.BuscarAlbum();
+                SqlCommand comando = new SqlCommand(cmd, connection);
 
-            SqlCommand comando = new SqlCommand(cmd, connection);
+                comando.Parameters.AddWithValue("@id", bId);
 
-            comando.Parameters.AddWithValue("@id", bId);
+                SqlDataReader resultado = comando.ExecuteReader();
 
-            SqlDataReader resultado = comando.ExecuteReader();
+                while (resultado.Read())
+                {
 
-            while (resultado.Read())
-            {
+                    album.Id = Convert.ToInt32(resultado["id"]);
+                    album.Nombre = Convert.ToString(resultado["nombre"]);
+                    album.Anio = Convert.ToInt32(resultado["anio_creacion"]);
+                    album.Band = new Banda();
+                    album.Band.Id = Convert.ToInt32(resultado["id_banda"]);
+                    album.GeneroMusical = Convert.ToString(resultado["genero"]);
 
-                album.Id = Convert.ToInt32(resultado["id"]);
-                album.Nombre = Convert.ToString(resultado["nombre"]);
-                album.Anio = Convert.ToInt32(resultado["anio_creacion"]);
-                album.Band = new Banda();
-                album.Band.Id = Convert.ToInt32(resultado["id_banda"]);
-                album.GeneroMusical = Convert.ToString(resultado["genero"]);
+                }
 
+                connection.Close();
+
+                return album;
             }
-
-            connection.Close();
-
-            return album;
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
     }

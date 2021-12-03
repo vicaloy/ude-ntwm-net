@@ -32,61 +32,72 @@ namespace Persistencia
 
         public void InsertarResena(Resena resena)
         {
+            try { 
+                String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(con);
 
-            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection connection = new SqlConnection(con);
+                connection.Open();
 
-            connection.Open();
+                string cmd = query.DarResena();
 
-            string cmd = query.DarResena();
+                SqlCommand comando = new SqlCommand(cmd, connection);
 
-            SqlCommand comando = new SqlCommand(cmd, connection);
+                comando.Parameters.AddWithValue("@id", resena.Id);
+                comando.Parameters.AddWithValue("@objeto", resena.Id_Objeto);
+                comando.Parameters.AddWithValue("@tipo", resena.Tipo);
+                comando.Parameters.AddWithValue("@puntaje", resena.Puntaje);
+                comando.Parameters.AddWithValue("@texto", resena.Texto);
 
-            comando.Parameters.AddWithValue("@id", resena.Id);
-            comando.Parameters.AddWithValue("@objeto", resena.Id_Objeto);
-            comando.Parameters.AddWithValue("@tipo", resena.Tipo);
-            comando.Parameters.AddWithValue("@puntaje", resena.Puntaje);
-            comando.Parameters.AddWithValue("@texto", resena.Texto);
+                comando.ExecuteNonQuery();
 
-            comando.ExecuteNonQuery();
-
-            connection.Close();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public List<Resena> ListarResena(int objeto, string tipo)
         {
-            List<Resena> resenas = new List<Resena>();
+            try { 
+                List<Resena> resenas = new List<Resena>();
 
-            Resena resena = new Resena();
+                Resena resena = new Resena();
 
-            String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection connection = new SqlConnection(con);
+                String con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(con);
 
-            connection.Open();
+                connection.Open();
 
-            string cmd = query.ListarResena();
+                string cmd = query.ListarResena();
 
-            SqlCommand comando = new SqlCommand(cmd, connection);
+                SqlCommand comando = new SqlCommand(cmd, connection);
 
-            comando.Parameters.AddWithValue("@objeto", objeto);
-            comando.Parameters.AddWithValue("@tipo", tipo);
+                comando.Parameters.AddWithValue("@objeto", objeto);
+                comando.Parameters.AddWithValue("@tipo", tipo);
 
-            SqlDataReader resultado = comando.ExecuteReader();
+                SqlDataReader resultado = comando.ExecuteReader();
 
-            while (resultado.Read())
-            {
-                resena.Id = Convert.ToInt32(resultado["id"]);
-                resena.Id_Objeto = Convert.ToInt32(resultado["id_objeto"]);
-                resena.Tipo = Convert.ToString(resultado["tipo"]);
-                resena.Puntaje = Convert.ToInt32(resultado["puntaje"]);
-                resena.Texto = Convert.ToString(resultado["texto"]);
+                while (resultado.Read())
+                {
+                    resena.Id = Convert.ToInt32(resultado["id"]);
+                    resena.Id_Objeto = Convert.ToInt32(resultado["id_objeto"]);
+                    resena.Tipo = Convert.ToString(resultado["tipo"]);
+                    resena.Puntaje = Convert.ToInt32(resultado["puntaje"]);
+                    resena.Texto = Convert.ToString(resultado["texto"]);
 
-                resenas.Add(resena);
+                    resenas.Add(resena);
+                }
+
+                connection.Close();
+
+                return resenas;
             }
-
-            connection.Close();
-
-            return resenas;
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
     }
