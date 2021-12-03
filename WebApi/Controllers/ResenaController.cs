@@ -14,7 +14,7 @@ namespace WebApi.Controllers
 
         IFachadaWeb fachada = Fachada.Instance();
 
-        public string GetAllResena(ResenaVO nResena)
+        public string AddResena(ResenaVO nResena)
         {
 
             fachada.InsertarResena(nResena);
